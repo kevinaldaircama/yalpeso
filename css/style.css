@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #fff;
+}
+
+.topbar {
+  background-color: #720e9e;
+  color: white;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topbar h1 {
+  font-size: 20px;
+  margin: 0;
+  flex: 1;
+  text-align: center;
+}
+
+.icon {
+  font-size: 20px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.tabs {
+  display: flex;
+  background-color: #f2f2f2;
+  border-bottom: 2px solid #ccc;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: #6a1b9a;
+  border-bottom: 3px solid #6a1b9a;
+}
+
+.tab.inactive {
+  color: #999;
+  border-bottom: none;
+}
+
+.search-bar {
+  padding: 10px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.contact-list {
+  padding: 10px;
+}
+
+.contact {
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.contact-name {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.contact-number {
+  color: #777;
+}

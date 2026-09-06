@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Generador Yape Demo</title>
+
+<link rel="stylesheet" href="css/genedemo.css">
+
+<script>
+(function(s){
+    s.dataset.zone='11115998';
+    s.src='https://n6wxm.com/vignette.min.js';
+})(
+    [document.documentElement, document.body]
+    .filter(Boolean)
+    .pop()
+    .appendChild(document.createElement('script'))
+);
+</script>
+
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<div class="modal" id="welcomeModal">
+
+<div class="modal-content">
+
+<h2>👋 Bienvenido</h2>
+
+<p>
+Bienvenido a este generador de prueba.
+</p>
+
+<p>
+Si deseas acceder a la versión completa,
+compra el acceso
+<a href="planes.html">aquí.</a>
+</p>
+
+<p class="texto-tiempo">
+dale crik en "cerrar ahora" para cerrar este modal.
+</p>
+
+<button onclick="cerrarWelcome()">
+Cerrar ahora
+</button>
+
+</div>
+</div>
+
+<div class="modal hidden" id="timeModal">
+
+<div class="modal-content">
+
+<h2>⏰ Tiempo agotado</h2>
+
+<p>
+La sesión de prueba terminó.
+</p>
+
+<button onclick="verAnuncio()">
+Ver anuncio y obtener 2 minutos más
+</button>
+
+</div>
+
+</div>
+
+<div class="form-container">
+
+<h1>Generador Yape</h1>
+
+<div class="timer">
+
+Tiempo restante
+
+<span id="contador">
+02:00
+</span>
+
+</div>
+
+<label>Nombre</label>
+
+<input
+type="text"
+id="nombre"
+placeholder="Ingresa tu nombre">
+
+<label>Teléfono</label>
+
+<input
+type="tel"
+id="telefono"
+placeholder="987654321">
+
+<label>Monto (S/)</label>
+
+<input
+type="number"
+id="monto"
+placeholder="20.50">
+
+<button onclick="generarYape()">
+Generar comprobante
+</button>
+
+<div class="mensaje" id="mensaje"></div>
+
+</div>
+
+<script src="js/demo.js"></script>
+
+</body>
+</html>

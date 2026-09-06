@@ -1,0 +1,135 @@
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#5B2D82;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    padding:20px;
+    overflow-x:hidden;
+}
+
+.phone{
+    width:380px;
+    max-width:100%;
+}
+
+.card{
+    border-radius:20px;
+    margin-bottom:15px;
+}
+
+.header-white{
+    background:white;
+    padding:20px;
+    border-radius:20px;
+    margin-bottom:15px;
+}
+
+.top-bar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px;
+    background:#5B2D82;
+    border-top-left-radius:20px;
+    border-top-right-radius:20px;
+}
+
+.close-icon{
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+}
+
+.logo{
+    height:30px;
+}
+
+.title{
+    color:#7A2F8F;
+    font-weight:bold;
+    font-size:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.share{
+    color:#00BFA5;
+    font-size:14px;
+    cursor:pointer;
+}
+
+.amount {
+    font-size:48px;
+    font-weight:bold;
+    margin:15px 0 5px;
+}
+
+.amount .currency {
+    font-size:24px;
+    vertical-align: top;
+    margin-right:2px;
+}
+
+.service {
+    font-size:26px;
+    font-weight:bold;
+    color:#000;
+    margin-bottom:10px;
+}
+
+.date-time {
+    color:#777;
+    font-size:14px;
+    margin-bottom:15px;
+    display:flex;
+    gap:10px;
+    align-items:center;
+}
+
+.date-time i {
+    color:#7A2F8F;
+}
+
+.divider{
+    border-top:1px solid #eee;
+    margin:15px 0;
+}
+
+.section-title{
+    color:#999;
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.row{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:8px;
+    font-size:15px;
+}
+
+.button{
+    background:#00BFA5;
+    color:white;
+    border:none;
+    border-radius:12px;
+    padding:15px;
+    width:100%;
+    font-size:16px;
+    cursor:pointer;
+    margin-bottom:15px;
+}
+
+.banner-img{
+    cursor:pointer;
+}
+
+.banner-img img{
+    width:100%;
+    border-radius:20px;
+    display:block;
+}

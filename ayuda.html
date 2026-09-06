@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Centro de Ayuda</title>
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#7B2C83">
+
+<link rel="stylesheet" href="css/ayuda.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<div class="header">
+  <i class="fa fa-arrow-left" onclick="history.back()"></i>
+  Centro de Ayuda
+</div>
+
+<div class="container">
+
+  <!-- VIDEO -->
+  <div class="card">
+    <i class="fa-solid fa-circle-play"></i>
+    <div class="card-content">
+      <h3>¿Cómo funciona la aplicación?</h3>
+      <p>Para aprender a usar la app correctamente, visualiza el siguiente video:</p>
+
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/vOWPPGpbUOY" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Crear cuenta -->
+  <div class="card">
+    <i class="fa-solid fa-user-plus"></i>
+    <div class="card-content">
+      <h3>Crear una cuenta</h3>
+      <p>Regístrate para empezar a usar la app de manera segura.</p>
+      <button class="btn btn-create" onclick="location.href='inicio'">
+        Crear cuenta
+      </button>
+    </div>
+  </div>
+
+  <!-- Cambiar correo -->
+  <div class="card">
+    <i class="fa-solid fa-envelope"></i>
+    <div class="card-content">
+      <h3>Cambiar correo electrónico</h3>
+      <p>Actualiza tu correo en la parte de "Mis datos".</p>
+    </div>
+  </div>
+
+  <!-- Cambiar datos -->
+  <div class="card">
+    <i class="fa-solid fa-id-card"></i>
+    <div class="card-content">
+      <h3>Actualizar información</h3>
+      <p>Modifica tus datos personales en la parte de "mis datos".</p>
+    </div>
+  </div>
+
+  <!-- Soporte -->
+  <div class="card">
+    <i class="fa-solid fa-headset"></i>
+    <div class="card-content">
+      <h3>Soporte y consultas</h3>
+      <p>Estamos disponibles para ayudarte.</p>
+      <button class="btn" onclick="abrirSoporte()">
+        Contactar soporte
+      </button>
+    </div>
+  </div>
+
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <h2>👋 Bienvenido</h2>
+    <p>
+      Gracias por ingresar. Aquí encontrarás algunas indicaciones para usar la aplicación correctamente.
+    </p>
+    <button class="btn" onclick="cerrarModal()">Entendido</button>
+  </div>
+</div>
+
+<script src="js/ayuda.js"></script>
+</body>
+</html>

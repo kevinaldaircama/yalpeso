@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Recarga</title>
+  <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#720e9e">
+<link rel="icon" type="image/png" href="imagen/app_icon_xxxhdpi.png">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/recarga.css">
+</head>
+<body>
+
+  <div class="container">
+    <h2><i class="fas fa-mobile-alt"></i> Recarga tu celular</h2>
+    
+    <input type="text" id="telefono" placeholder="Número de celular" maxlength="9" required>
+    
+    <select id="operador" required>
+      <option value="">Selecciona operador</option>
+      <option value="Claro">Claro</option>
+      <option value="Movistar">Movistar</option>
+      <option value="Entel">Entel</option>
+      <option value="Bitel">Bitel</option>
+    </select>
+    
+    <input type="number" id="monto" placeholder="Monto en S/" min="1" required>
+    
+    <button id="btnRecargar">Recargar</button>
+    <div class="mensaje" id="mensaje"></div>
+  </div>
+
+  <script src="js/recarga.js"></script>
+</body>
+</html>

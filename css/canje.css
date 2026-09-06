@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f7f3ff;
+  color: #333;
+}
+
+.status-bar {
+  width: 100%;
+  background-color: #6a1b9a;
+  color: white;
+  padding: 5px 10px;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+  background-color: #6a1b9a;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.container {
+  width: 95%;
+  max-width: 420px;
+  margin: 8px auto 80px auto;
+}
+
+.card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  margin-bottom: 15px;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.info {
+  padding: 15px;
+}
+
+.info h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.info p {
+  font-size: 14px;
+  color: #666;
+  margin: 8px 0;
+}
+
+.price {
+  font-size: 22px;
+  color: #3a0075;
+  font-weight: bold;
+}
+
+.link {
+  color: #00bfa6;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.options {
+  background: #fff;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  margin-bottom: 15px;
+}
+
+label.option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1.5px solid #ccc;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 10px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+label.option.active {
+  border-color: #00bfa6;
+  background-color: #e6fffa;
+}
+
+label.option input {
+  margin-right: 8px;
+  transform: scale(1.2);
+  accent-color: #00bfa6;
+}
+
+.help {
+  background: #fff;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  margin-bottom: 15px;
+}
+
+.help h4 {
+  color: #6a1b9a;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.help ol {
+  padding-left: 18px;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.btn {
+  display: block;
+  width: 95%;
+  max-width: 420px;
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 15px;
+  cursor: not-allowed;
+  background-color: #ccc;
+  color: #777;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn.enabled {
+  background-color: #00bfa6;
+  color: white;
+  cursor: pointer;
+}

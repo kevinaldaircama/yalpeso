@@ -1,0 +1,78 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #62027a;
+  color: #1c1c1c;
+}
+.container {
+  padding: 16px;
+}
+.comprobante-box {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 16px;
+  position: relative;
+}
+.titulo {
+  color: #833c94;
+  font-weight: 700;
+  font-size: 20px;
+}
+.compartir {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: #00b3ac;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.compartir i { margin-right: 5px; }
+.monto {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 10px 0 4px;
+}
+.nombre {
+  font-size: 18px;
+  font-weight: 500;
+}
+.fecha-hora {
+  font-size: 14px;
+  color: #777;
+  margin-top: 6px;
+}
+.fecha-hora i { margin: 0 4px 0 0; }
+.datos-transaccion {
+  margin-top: 20px;
+}
+.datos-transaccion h4 {
+  font-size: 13px;
+  color: #999;
+  margin-bottom: 10px;
+}
+.datos-transaccion div {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  font-size: 15px;
+}
+.banner {
+  background: #62027a;
+  border-radius: 16px;
+  padding: 10px;
+}
+.banner img {
+  width: 100%;
+  border-radius: 12px;
+}
+.cerrar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+}

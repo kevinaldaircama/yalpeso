@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Planes y Suscripciones</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#720e9e">
+<link rel="icon" href="imagen/app_icon_xxxhdpi.png">
+<link
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/proveedor.css">
+</head>
+
+<body>
+
+<!-- 🔥 MODAL -->
+<div id="modalPago">
+  <div class="modal-box">
+
+    <h2>Confirmar compra</h2>
+
+    <div class="info-plan">
+      <p><b>Plan:</b> <span id="planNombre"></span></p>
+      <p><b>Monto:</b> S/ <span id="planPrecio"></span></p>
+    </div>
+
+    <p class="txt-help">
+      ⚠️ Primero realiza el pago y luego completa el formulario.
+    </p>
+
+    <button onclick="irMP()" class="btn btn-mp">
+      💳 Pagar con Mercado Pago
+    </button>
+
+    <div class="formulario-pago">
+
+      <input type="text" id="nombre" placeholder="Nombre completo">
+
+      <input type="email" id="correo" placeholder="Correo electrónico">
+
+      <input type="text" id="idPago" placeholder="ID del pago">
+
+      <button onclick="confirmarPago()" class="btn btn-success">
+        Confirmar pago
+      </button>
+
+    </div>
+
+    <button onclick="cerrarModal()" class="close">
+      Cancelar
+    </button>
+
+  </div>
+</div>
+
+<!-- BOTÓN AYUDA -->
+<a href="soporte" class="help-btn">
+  <i class="fa-solid fa-headset"></i>
+</a>
+
+<header>
+  <h1 class="title">Proveedor Premium</h1>
+  <p>Acceso al sistema • Soporte • Activación inmediata</p>
+</header>
+<main class="container">
+
+<!-- PLAN POBLE -->
+<div class="plan">
+  <span class="badge">Básico</span>
+  <h2>Proveedor Básico</h2>
+
+  <div class="details">
+    <p><i class="fa-solid fa-calendar-week"></i> Acceso por 7 días</p>
+    <p><i class="fa-solid fa-headset"></i> Soporte incluido</p>
+    <p><i class="fa-solid fa-user-check"></i> Acceso al sistema</p>
+  </div>
+
+  <p class="price" data-precio="30">S/ 30</p>
+
+  <div class="btn" onclick="pagar('Proveedor Básico',30)">
+    Comprar
+  </div>
+</div>
+
+<div class="plan">
+  <span class="badge">Popular</span>
+  <h2>Proveedor Estándar</h2>
+
+  <div class="details">
+    <p><i class="fa-solid fa-calendar-days"></i> Acceso por 15 días</p>
+    <p><i class="fa-solid fa-headset"></i> Soporte incluido</p>
+    <p><i class="fa-solid fa-user-check"></i> Acceso al sistema</p>
+  </div>
+
+  <p class="price" data-precio="45">S/ 45</p>
+
+  <div class="btn" onclick="pagar('Proveedor Estándar',45)">
+    Comprar
+  </div>
+</div>
+
+<div class="plan destacado">
+  <span class="badge pro">🔥 Recomendado</span>
+  <h2>Proveedor Premium</h2>
+
+  <div class="details">
+    <p><i class="fa-solid fa-calendar"></i> Acceso por 30 días</p>
+    <p><i class="fa-solid fa-headset"></i> Soporte prioritario</p>
+    <p><i class="fa-solid fa-shield-halved"></i> Acceso completo</p>
+  </div>
+
+  <p class="price" data-precio="90">S/ 90</p>
+
+  <div class="btn" onclick="pagar('Proveedor Premium',90)">
+    Comprar
+  </div>
+</div>
+
+<div class="plan premium">
+  <span class="badge premium-badge">👑 Elite</span>
+  <h2>Proveedor Elite</h2>
+
+  <div class="details">
+    <p><i class="fa-solid fa-calendar-check"></i> Acceso por 90 días</p>
+    <p><i class="fa-solid fa-crown"></i> Soporte VIP</p>
+    <p><i class="fa-solid fa-infinity"></i> Uso ilimitado</p>
+  </div>
+
+  <p class="price" data-precio="150">S/ 150</p>
+
+  <div class="btn" onclick="pagar('Proveedor Elite',150)">
+    Comprar
+  </div>
+</div>
+
+</main>
+<script src="js/proveedor.js"></script>
+
+</body>
+        </html>
+  

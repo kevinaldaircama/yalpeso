@@ -1,0 +1,73 @@
+====================================================
+PROPRIETARY LICENSE – ALL RIGHTS RESERVED
+====================================================
+
+Project: YAPE FAKE
+Author: Kevin Tech Tutorials
+Years: 2025–2026
+
+----------------------------------------------------
+OWNERSHIP
+----------------------------------------------------
+
+This repository and all its contents, including but not limited to
+source code, binaries, assets, documentation, designs, concepts,
+and related materials (the "Software") are the exclusive property
+of the Author.
+
+All rights not expressly granted in this License are reserved.
+
+----------------------------------------------------
+PERMITTED USE
+----------------------------------------------------
+
+The following actions are permitted:
+
+✔ Viewing the source code within this repository.
+✔ Cloning the repository strictly for personal evaluation purposes.
+✔ Using the Software only if a valid commercial license has been
+   explicitly granted in writing by the Author.
+
+No other rights are granted, whether express or implied.
+
+----------------------------------------------------
+PROHIBITED ACTIONS
+----------------------------------------------------
+
+Under no circumstances is any person allowed to:
+
+❌ Copy, reproduce, or extract the code in whole or in part.
+❌ Modify, adapt, translate, reverse engineer, or create derivative works.
+❌ Redistribute the Software in public or private repositories.
+❌ Sell, sublicense, rent, lease, or commercially exploit the Software.
+❌ Publish modified or unmodified versions.
+❌ Share the Software with third parties.
+❌ Use the Software for commercial or production environments without written authorization.
+
+----------------------------------------------------
+NO LICENSE GRANTED
+----------------------------------------------------
+
+Access to this repository does NOT grant any license or rights
+to use the Software beyond what is explicitly permitted above.
+
+----------------------------------------------------
+LIMITATION OF LIABILITY
+----------------------------------------------------
+
+The Software is provided "AS IS" without warranty of any kind.
+The Author shall not be liable for any damages arising from
+the use or inability to use the Software.
+
+----------------------------------------------------
+COMMERCIAL LICENSE
+----------------------------------------------------
+
+To request a commercial license, contact:
+
+Email: kevinaldaircamachoserna51@gmail.com
+
+----------------------------------------------------
+
+Copyright (c) 2026 Kevin Tech Tutorials
+All Rights Reserved.

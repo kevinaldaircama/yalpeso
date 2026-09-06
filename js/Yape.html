@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulario Yape</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #650D89;
+      color: white;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .form-container {
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .form-container label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .form-container input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: none;
+      border-radius: 10px;
+      outline: none;
+      font-size: 16px;
+    }
+    .form-container button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 10px;
+      background: #00d4aa;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .form-container button:hover {
+      background: #00bfa5;
+    }
+    .mensaje {
+      text-align: center;
+      font-size: 18px;
+      margin-top: 15px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Generar Comprobante Yape</h2>
+    <label>Nombre:</label>
+    <input type="text" id="nombre" placeholder="Ingresa tu nombre" required />
+
+    <label>Número Telefónico:</label>
+    <input type="tel" id="telefono" placeholder="Ej: 987654321" required />
+
+    <label>Monto (S/):</label>
+    <input type="number" id="monto" placeholder="Ej: 20.50" required />
+
+    <button onclick="generarYape()">Generar Yape</button>
+    <div class="mensaje" id="mensaje"></div>
+  </div>
+
+  <script>
+    function generarYape() {
+      const nombre = document.getElementById("nombre").value.trim();
+      const telefono = document.getElementById("telefono").value.trim();
+      const monto = document.getElementById("monto").value.trim();
+      const mensaje = document.getElementById("mensaje");
+
+      if (!nombre || !telefono || !monto) {
+        alert("Por favor completa todos los campos.");
+        return;
+      }
+
+      mensaje.style.display = "block";
+      mensaje.textContent = "Procesando datos...";
+
+      setTimeout(() => {
+        mensaje.textContent = "Generando información...";
+
+        setTimeout(() => {
+          const url = `comprobante.html?nombre=${encodeURIComponent(nombre)}&telefono=${encodeURIComponent(telefono)}&monto=${encodeURIComponent(monto)}`;
+          window.location.href = url;
+        }, 2000);
+      }, 2000);
+    }
+  </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Comprobante Yape</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #650D89;
+      color: #000;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: auto;
+      padding: 15px;
+      background-color: #650D89;
+    }
+
+    .logo {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 10px;
+    }
+
+    .cerrar {
+      width: 35px;
+      height: 35px;
+      background-color: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      color: white;
+      font-size: 20px;
+      text-align: center;
+      line-height: 35px;
+      cursor: pointer;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    .card h2 {
+      color: #650D89;
+      font-size: 18px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .monto {
+      font-size: 30px;
+      margin: 5px 0;
+      font-weight: bold;
+    }
+
+    .nombre {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .datos {
+      font-size: 14px;
+      color: #666;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      justify-content: flex-start;
+    }
+
+    .datos i {
+      font-weight: normal;
+      color: #666;
+    }
+
+    .datos span {
+      font-weight: bold;
+    }
+
+    .separator {
+      color: #aaa;
+      font-weight: normal;
+    }
+
+    .share {
+      color: #00bfa5;
+      font-size: 13px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .share i {
+      margin-right: 5px;
+    }
+
+    .caja {
+      background-color: #f0f0f0;
+      width: 30px;
+      height: 30px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      color: #000;
+    }
+
+    .transaccion-title {
+      font-size: 13px;
+      color: gray;
+      font-weight: bold;
+      margin-bottom: 8px;
+      margin-top: 10px;
+    }
+
+    .info {
+      font-size: 13px;
+      color: gray;
+      padding-top: 10px;
+    }
+
+    .info p {
+      margin: 5px 0;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .info p strong {
+      font-weight: bold;
+      color: #000;
+    }
+
+    .info p span {
+      font-weight: bold;
+      color: #000;
+    }
+
+    .footer-img {
+      width: 100%;
+      border-radius: 15px;
+      margin-top: 20px;
+    }
+
+    .icono-seguridad {
+      width: 20px;
+      height: 20px;
+    }
+
+    .label-seguridad {
+      font-size: 13px; 
+      color: gray; 
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>

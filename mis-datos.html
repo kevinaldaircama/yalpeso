@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mis datos</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Manifest PWA -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#720e9e" />
+  <link rel="icon" type="image/png" href="imagen/app_icon_xxxhdpi.png"> 
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/mis-datos.css">
+</head>
+<body>
+  <div class="header">
+    <a class="back-arrow" href="home.html">&#8592;</a>
+    <span>Mis datos</span>
+  </div>
+
+  <div class="container">
+    <div class="label">Nombre</div>
+    <div class="input-group">
+      <input type="text" id="nombre" disabled />
+    </div>
+    <div class="divider"></div>
+
+    <div class="label">ID de identificación</div>
+    <div class="value">
+      <span id="uid-value" data-hidden="true">••••••••</span>
+      <button class="icon-button" onclick="toggleVisibility('uid-value', 'uid-icon')">
+        <i id="uid-icon" class="fas fa-eye-slash"></i>
+      </button>
+    </div>
+    <div class="divider"></div>
+
+    <div class="label">Correo electrónico</div>
+<div class="input-group">
+  <input type="email" id="correo" disabled />
+</div>
+<div class="divider"></div>
+
+    <div class="label">Saldo disponible</div>
+    <div class="input-group">
+      <input type="number" id="monto" disabled />
+    </div>
+    <div class="divider"></div>
+
+    <div class="label">PIN actual</div>
+<div class="input-group">
+  <input type="password" id="pin" disabled />
+</div>
+
+<div class="label">Contraseña</div>
+
+<div class="input-group">
+
+  <input
+    type="password"
+    id="password"
+    disabled
+  />
+
+  <button
+    class="icon-button"
+    onclick="toggleVisibilityInput('password','pass-icon')"
+  >
+    <i
+      id="pass-icon"
+      class="fas fa-eye-slash"
+    ></i>
+  </button>
+
+</div>
+
+<div class="divider"></div>
+
+    <div class="label">Número de teléfono</div>
+<div class="input-group">
+  <input type="text" id="telefono" disabled />
+</div>
+    <div class="divider"></div>
+
+    <div class="label">Estado</div>
+    <div class="value">Activo</div>
+    <div class="divider"></div>
+
+    <button class="btn-editar" onclick="activarEdicion()">Editar</button>
+    <button class="btn-guardar" id="guardarBtn" onclick="guardarCambios()">Guardar cambios</button>
+
+  </div>
+
+  <!-- Modal -->
+  <div id="modal">
+    <div id="modal-content">
+      <p id="modal-message"></p>
+      <button onclick="cerrarModal()">Cerrar</button>
+    </div>
+  </div>
+
+  <!-- Script -->
+  
+  <script src="js/firebase-config.js"></script>
+<script type="module" src="js/mis-datos.js"></script>
+
+</body>
+</html>

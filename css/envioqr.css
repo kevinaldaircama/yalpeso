@@ -1,0 +1,86 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #fff;
+  color: #333;
+}
+
+header {
+  background-color: #7b1fa2;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.back, .close {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 18px;
+}
+
+.container {
+  text-align: center;
+  margin-top: 50px;
+  padding: 0 20px;
+}
+
+input[type="text"], input[type="number"] {
+  font-size: 18px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.monto {
+  font-size: 48px;
+  color: #7b1fa2;
+  margin: 20px 0 10px;
+}
+
+.monto input {
+  width: 80px;
+  font-size: 48px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  text-align: center;
+}
+
+.limite {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+.mensaje {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #ccc;
+  padding: 15px;
+  font-size: 16px;
+}
+
+.btn-yapear {
+  background-color: #e0d7ec;
+  color: #7b1fa2;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  width: 100%;
+  padding: 15px 0;
+  cursor: pointer;
+}
+
+.subtexto {
+  color: gray;
+}
+
+input[readonly] {
+  background-color: #f0f0f0;
+}

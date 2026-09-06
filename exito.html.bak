@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PIN cambiado</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#720e9e">
+<link rel="icon" type="image/png" href="imagen/app_icon_xxxhdpi.png">
+  
+<!-- Estilos -->
+<link rel="stylesheet" href="cc/exito.css">
+
+<!-- FontAwesome -->
+<script src="https://kit.fontawesome.com/5a8e0b6c2d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Ilustración -->
+    <img src="imagen/1755913090379.png" alt="Ilustración" class="illustration">
+
+    <h1>¡Listo!</h1>
+    <h2>Cambiaste tu clave segura</h2>
+
+    <div class="info">
+      <p><i class="fas fa-exclamation-triangle"></i> Tu nueva clave estará activa en un máximo de 5 minutos.</p>
+      <p><i class="fas fa-lock"></i> Recuerda no compartir tu nueva clave secreta con nadie.</p>
+      <p><i class="fas fa-shield-alt"></i> Además, puedes activar tu Biometría digital para ingresar a Yape.</p>
+    </div>
+
+    <button class="btn" id="inicioBtn">IR AL INICIO</button>
+  </div>
+
+<script src="app/exito.js"></script>
+</body>
+</html>

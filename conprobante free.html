@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>Compra exitosa - Free Fire</title>
+
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#720e9e" />
+
+  <link rel="icon" type="image/png"
+  href="imagen/app_icon_xxxhdpi.png">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  rel="stylesheet">
+
+  <link rel="stylesheet"
+  href="css/comprobantesfree.css">
+
+</head>
+
+<body>
+
+<div class="wrap">
+
+  <div class="check-ctn">
+    <div class="check">
+      <i class="fa-solid fa-check"></i>
+    </div>
+  </div>
+
+
+  <!-- ✅ comprobante -->
+  <main class="card" id="comprobante">
+
+    <div class="card-inner">
+
+      <h1 class="title">
+        ¡Compra exitosa!
+      </h1>
+
+      <p class="amount">
+        <span class="mon">S/</span>
+        <span id="monto">0.00</span>
+      </p>
+
+      <p class="date"
+      id="fechaHora"></p>
+
+
+      <div class="provider">
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz6C374FSXnQkHFcReKGZItHCUikPBQu_uB3dZnOWwYQ&s">
+
+        <div class="name">
+          <strong>GARENA</strong>
+        </div>
+
+      </div>
+
+
+      <div class="product-line"
+      id="paquete">
+        Diamantes
+      </div>
+
+
+      <div class="divider"></div>
+
+
+      <section class="info">
+
+        <div class="row-group">
+
+          <div>
+            <span class="label">
+              User name:
+            </span>
+
+            <span id="username">
+              ---
+            </span>
+
+          </div>
+
+          <div>
+            <span class="label">
+              ID de jugador:
+            </span>
+
+            <span id="playerId">
+              ---
+            </span>
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <div class="instructions">
+
+        <strong>Indicaciones:</strong><br>
+
+        Se realizó la recarga.
+        Si no se refleja,
+        vuelve a consultarla
+        en unos minutos.
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+
+  <!-- botones -->
+
+  <div class="bottom">
+
+    <button
+    class="action-btn"
+    onclick="compartir()">
+
+      <i class="fa-solid fa-share-nodes"></i>
+
+    </button>
+
+    <div class="action-txt">
+      Compartir
+    </div>
+
+
+    <button
+    class="action-btn"
+    id="volverInicio">
+
+      <i class="fa-solid fa-gamepad"></i>
+
+    </button>
+
+    <div class="action-txt">
+      Volver a inicio
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- html2canvas -->
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+<script src="js/comprobantesfree.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Comprobante</title>
+
+<link rel="manifest" href="manifest.json" />  
+<meta name="theme-color" content="#720e9e" />  
+<link rel="icon" type="image/png" href="imagen/app_icon_xxxhdpi.png">  
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="css/comprobante1.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+</head>
+<body>
+
+<div id="comprobante">
+
+<div class="top">
+
+<img src="imagen/yapelog.png" class="logo">
+
+<div class="close">
+<i class="fa-solid fa-xmark"></i>
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="share" onclick="compartir()">
+<i class="fa-solid fa-share-nodes"></i>
+Compartir
+</div>
+
+<div class="title">¡Yapeaste!</div>
+
+<div class="monto">
+<div class="sol">S/</div>
+<div id="monto">0</div>
+</div>
+
+<div class="nombre">
+<b id="nombre">Nombre</b>
+</div>
+
+<div class="fecha">
+
+<i class="fa-regular fa-calendar"></i>
+<span id="fecha"></span>
+
+&nbsp; | &nbsp;
+
+<i class="fa-regular fa-clock"></i>
+<span id="hora"></span>
+
+</div>
+
+<div class="line"></div>
+
+<div class="label">DATOS DE LA TRANSACCIÓN</div>
+
+<div class="row">
+<span>Nro. de celular</span>
+<span id="telefono"></span>
+</div>
+
+<div class="row">
+<span>Destino</span>
+<span id="destino">Plin</span>
+</div>
+
+<div class="row">
+<span>Nro. de operación</span>
+<span id="operacion"></span>
+</div>
+
+</div>
+
+
+<div class="banner">
+
+<img class="banner-img"
+src="imagen/banner1.jpg">
+
+</div>
+
+</div>
+
+<script src="js/comprobante1.js"></script>
+
+</body>
+</html>

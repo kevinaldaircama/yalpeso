@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Alerta de seguridad</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#720e9e">
+<link rel="icon" type="image/png" href="imagen/app_icon_xxxhdpi.png">
+
+<!-- Estilos -->
+<link rel="stylesheet" href="css/alerta.css">
+
+</head>
+<body>
+
+  <!-- Top bar -->
+  <div class="topbar">
+    <a href="pagina-atras.html" class="back" aria-label="Volver">
+      <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+      </svg>
+    </a>
+    <h2>Alerta de seguridad</h2>
+  </div>
+
+  <!-- Hero con iconos -->
+  <div class="hero">
+    <svg class="thief" viewBox="0 0 220 220">
+      <circle cx="70" cy="80" r="48" fill="#ffd6b4"/>
+      <path d="M22,72 q48-40 96,0 v-18 q-48-28-96,0z" fill="#1a1040"/>
+      <rect x="22" y="58" width="118" height="20" rx="10" fill="#2b1a56"/>
+      <rect x="32" y="78" width="96" height="28" rx="14" fill="#0f0a28"/>
+      <circle cx="60" cy="92" r="7" fill="#fff"/>
+      <circle cx="100" cy="92" r="7" fill="#fff"/>
+      <circle cx="60" cy="92" r="3" fill="#1a1a1a"/>
+      <circle cx="100" cy="92" r="3" fill="#1a1a1a"/>
+      <path d="M62,112 q18,10 36,0" stroke="#c97d5e" stroke-width="4" fill="none" stroke-linecap="round"/>
+    </svg>
+
+    <!-- CANDADO -->
+    <svg class="lock" viewBox="0 0 200 240">
+      <path d="M60,70 a40,40 0 0 1 80,0 v40 h-20 v-40 a20,20 0 0 0 -40,0 v40 h-20z" fill="#cfa7ff"/>
+      <rect x="35" y="100" width="130" height="120" rx="18" fill="#b579e6"/>
+      <rect x="52" y="120" width="96" height="84" rx="14" fill="#dcb8ff"/>
+      <circle cx="100" cy="162" r="10" fill="#7a4cab"/>
+      <rect x="94" y="162" width="12" height="26" rx="6" fill="#7a4cab"/>
+    </svg>
+
+    <!-- ADVERTENCIA -->
+    <svg class="warn" viewBox="0 0 100 100">
+      <path d="M10 90h80L50 10z" fill="var(--warning)"/>
+      <rect x="46" y="38" width="8" height="34" rx="3" fill="#3a2c00"/>
+      <circle cx="50" cy="78" r="5" fill="#3a2c00"/>
+    </svg>
+  </div>
+    <svg class="thief" viewBox="0 0 220 220"></svg>
+    <svg class="lock" viewBox="0 0 200 240"></svg>
+    <svg class="warn" viewBox="0 0 100 100"></svg>
+  </div>
+
+  <!-- Panel informativo -->
+  <section class="panel">
+    <h1>Si tu clave es muy fácil, otros podrían adivinarla</h1>
+
+    <div class="row">
+      <svg viewBox="0 0 24 24"><path fill="#6c2aa7" d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3z"/></svg>
+      <p>Una clave segura protege tu Yape ante un robo.</p>
+    </div>
+
+    <div class="row">
+      <svg viewBox="0 0 24 24"><path fill="#6c2aa7" d="M17 9h-1V7a4 4 0 0 0-8 0v2H7a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2Zm-6 0V7a2 2 0 0 1 4 0v2h-4Z"/></svg>
+      <p>Cambia tu clave, yapero.<br>¡Tu seguridad es lo primero!</p>
+    </div>
+
+    <a href="nueva-clave.html" class="cta">CREAR NUEVA CLAVE</a>
+  </section>
+
+  <script src="js/alerta.js"></script>
+</body>
+</html>

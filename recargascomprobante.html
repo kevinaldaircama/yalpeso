@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>Comprobante de Recarga</title>  
+  <link rel="manifest" href="manifest.json" />  
+  <meta name="theme-color" content="#720e9e" />  
+  <link rel="icon" type="image/png" href="imagen/app_icon_xxxhdpi.png">     
+  <!-- Íconos -->  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">  
+  <link rel="stylesheet" href="css/recargascomprobante.css">  
+</head>  
+<body>  
+  <!-- Header -->    
+  <div class="header">  
+    <img src="imagen/yapelog.png" alt="Logo">  
+    <div class="close"><i class="fas fa-times"></i></div>  
+  </div>  
+
+  <!-- Comprobante -->    
+  <div class="container">  
+    <div class="title">  
+      <span>¡Recargaste!</span>  
+      <div class="share"><i class="fas fa-share-alt"></i> COMPARTIR</div>  
+    </div>  
+
+    <div class="amount" id="monto">S/ 0</div>  
+    <div class="subtitle">Nuevo número</div>  
+
+    <!-- Fecha y hora -->  
+    <div class="details">  
+      <div class="icons">  
+        <i class="fas fa-calendar-alt"></i>   
+        <span id="fecha"></span> |   
+        <i class="fas fa-clock"></i>   
+        <span id="hora"></span>  
+      </div>  
+
+      <h4>DATOS DE LA TRANSACCIÓN</h4>  
+
+      <!-- Datos alineados -->  
+      <div class="row">  
+        <b>N° de celular:</b>  
+        <span id="telefono"></span>  
+      </div>  
+      <div class="row">  
+        <b>Nro. de operación:</b>  
+        <span id="operacion"></span>  
+      </div>  
+      <div class="row">  
+        <b>Operadora:</b>  
+        <span id="operadora"></span>  
+      </div>  
+    </div>  
+  </div>    
+
+  <!-- Botón fuera del fondo blanco -->  
+  <a href="recargas" class="button"><i class="fas fa-mobile-alt"></i> NUEVA RECARGA</a>  
+
+  <script src="js/recargascomprobante.js"></script>  
+</body>  
+</html>

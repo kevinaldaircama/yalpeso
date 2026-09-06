@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Acceso Privado</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#720e9e">
+<link rel="icon" href="imagen/app_icon_xxxhdpi.png">
+
+<link rel="stylesheet" href="css/token.css">
+</head>
+
+<body>
+
+<div id="maintenanceScreen">
+  <h1>🚧 Sistema en mantenimiento</h1>
+  <p>Estamos realizando mejoras.<br>Vuelve más tarde.</p>
+</div>
+
+<div class="card">
+  <h1>Acceso Premium</h1>
+  <div class="subtitle">Sistema seguro</div>
+
+  <input id="token" placeholder="Ingresa tu token">
+
+  <button id="loginBtn">Continuar</button>
+
+  <a href="planes" target="_blank" class="buy">
+    Comprar Acceso
+  </a>
+
+  <div id="msg" class="msg"></div>
+
+  <div class="watermark">
+    Desarrollador: <b>Kevin tech tutorials</b>
+  </div>
+</div>
+
+<script src="js/firebase-config.js"></script>
+<script type="module" src="js/token.js"></script>
+
+</body>
+</html>

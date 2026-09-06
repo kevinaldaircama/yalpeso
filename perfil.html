@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Perfil</title>
+<link rel="icon" href="imagen/app_icon_xxxhdpi.png">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/perfil.css">
+</head>
+<body>
+
+<div class="header">
+  <div class="header-top">
+    <i class="fa-solid fa-arrow-left" onclick="history.back()"></i> Mi cuenta
+  </div>
+</div>
+
+<div class="content">
+
+  <!-- MI CUENTA -->
+  <div class="section">
+    <div class="section-title">MI CUENTA</div>
+    <div class="card">
+      <a href="mis-datos"><div class="item"><i class="fa-regular fa-id-card icon-box"></i> Mis Datos</div></a>
+      <a href="guarda"><div class="item"><i class="fa-regular fa-address-book icon-box"></i> Agregar Contactos</div></a>
+      <a href="qrsguarda"><div class="item"><i class="fa-solid fa-qrcode icon-box"></i> Agregar Qr</div></a>
+      <a href="clave"><div class="item"><i class="fa-solid fa-key icon-box"></i> Cambiar Clave</div></a>
+      <div class="item" onclick="mostrarModal()">
+        <i class="fa-solid fa-rotate icon-box"></i> Actualizar versión
+      </div>
+      <a href="https://wa.me/message/2Q7FHTMNO7IVO1"><div class="item"><i class="fa-solid fa-circle-question icon-box"></i> Ayuda</div></a>
+    </div>
+  </div>
+
+  <!-- OPCIONES -->
+  <div class="section">
+    <div class="section-title">OPCIONES</div>
+    <div class="card">
+      <a href="https://shop.kevintechtutorials.store"><div class="item"><i class="fa-solid fa-store icon-box"></i> Tienda</div></a>
+      <a href="https://t.me/appsfake_oficial"><div class="item"><i class="fa-solid fa-users icon-box"></i> Comunidad</div></a>
+      <a href="dinero"><div class="item"><i class="fa-solid fa-paper-plane icon-box"></i> Enviar dinero</div></a>
+    </div>
+  </div>
+
+  <!-- BANCAS -->
+  <div class="section">
+    <div class="section-title">BANCAS</div>
+    <div class="card">
+      <a href="app/plin"><div class="item"><i class="fa-regular fa-credit-card icon-box"></i> generador plin (Interbank)</div></a>
+      <a href="https://bcp.roddox.es/app/cuenta"><div class="item"><i class="fa-regular fa-credit-card icon-box"></i> generador bcp</div></a>
+    </div>
+  </div>
+
+  <!-- CERRAR SESIÓN -->
+  <div class="section">
+    <div class="card">
+      <a href="#" onclick="cerrarSesion()">
+        <div class="item">
+          <i class="fa-solid fa-right-from-bracket icon-box"></i> Cerrar sesión
+        </div>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <h3>Estás en la última versión</h3>
+    <p>Las actualizaciones son en vivo y se aplican automáticamente.</p>
+    <button onclick="cerrarModal()">Entendido</button>
+  </div>
+</div>
+
+<!-- JS Modular -->
+<script src="js/firebase-config.js"></script>
+<script type="module" src="js/perfil.js"></script>
+
+</body>
+</html>

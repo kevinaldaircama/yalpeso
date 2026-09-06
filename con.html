@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resumen de compra</title>
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#720e9e">
+  <link rel="icon" type="image/png" href="imagen/app_icon_xxxhdpi.png">
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="css/con.css">
+</head>
+<body>
+
+  <header>
+    <a href="pantalla1.html">←</a>
+    Resumen de compra
+  </header>
+
+  <div class="resumen-container">
+
+    <div class="section-title">Pedido</div>
+    <div class="pedido">
+      <img src="imagen/free.jpg" alt="Free Fire Garena">
+      <div>
+        <h3>Free Fire Garena</h3>
+        <p id="detalleCompra"></p>
+      </div>
+    </div>
+
+    <div class="section-title">¿Tienes un cupón de descuento?</div>
+    <div class="cupon">
+      <input type="text" placeholder="Ingresa el código*">
+      <button disabled>Aplicar</button>
+    </div>
+
+    <div class="section-title">Detalle de pago</div>
+    <div class="detalle">
+      <p><span>Precio con dcto.</span> <span id="precio"></span></p>
+      <p class="total"><span>Total a pagar</span> <span id="total"></span></p>
+    </div>
+
+    <div class="terminos">
+      Al yapear estarás aceptando los <a href="#">Términos y condiciones</a>.
+    </div>
+
+  </div>
+
+  <button class="boton" id="btnYapear">Yapear</button>
+
+  <!-- JS externo -->
+  <script src="js/con.js"></script>
+</body>
+</html>

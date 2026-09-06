@@ -1,0 +1,181 @@
+<!DOCTYPE html>  
+<html lang="es">  
+<head>  
+<meta charset="UTF-8">  
+<title>Dashboard Usuarios</title>  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#720e9e">
+<link rel="icon" type="image/png" href="imagen/app_icon_xxxhdpi.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">  
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>  
+<link rel="stylesheet" href="css/admin.css">
+</head>  
+<body>
+
+<div class="modal-overlay" id="modalCreated" style="display:none;">  
+<div class="modal-box">  
+  
+<h3>Cuenta creada</h3>  
+  
+<p id="createdData"></p>  
+  
+<button id="sendWA">Enviar por WhatsApp</button>  
+  
+<button onclick="closeCreated()">Cerrar</button>  
+  
+</div>  
+</div>  
+<!-- SIDEBAR -->  
+<div class="sidebar" id="sidebar">  
+<h2>DASHBOARD</h2>  
+<a class="active" data-section="dashboard"><i class="fa fa-chart-bar"></i> Dashboard</a>  
+<a data-section="users"><i class="fa fa-users"></i> Usuarios</a>  
+<a data-section="tokens">
+<i class="fa fa-key"></i> Tokens
+</a>
+<a data-section="settings"><i class="fa fa-gear"></i> Configuración</a>  
+<a id="logoutBtn">
+  <i class="fa fa-sign-out-alt"></i>
+  Cerrar sesión
+</a>
+</div>  
+  
+<div class="hamburger" id="menuBtn"><span></span><span></span><span></span></div>  
+  
+<div class="content" id="content">  
+  
+<!-- DASHBOARD -->  
+<div id="dashboard" class="box" style="display:none;">  
+<h2>Dashboard</h2>  
+<p id="welcome"></p>  
+<canvas id="roleChart"></canvas>  
+</div>  
+  
+<!-- USUARIOS -->  
+<div id="users" class="box" style="display:none;">  
+<h2>Usuarios</h2>  
+<h3>Crear Usuario</h3>  
+<input id="newUser" placeholder="Usuario">  
+<input id="newEmail" placeholder="Correo">  
+<input id="newPass" placeholder="Contraseña">  
+<input id="newName" placeholder="Nombre">  
+<input id="newPhone" placeholder="WhatsApp">  
+<input
+  id="newExpire"
+  type="number"
+  placeholder="Días de duración (7, 30, 60...)">  
+<select id="newRole">
+    <option value="">Selecciona proveedor</option>
+  <option value="Proveedor Básico">Proveedor Básico</option>
+  <option value="Proveedor Standard">Proveedor Standard</option>
+  <option value="Proveedor Premium">Proveedor Premium</option>
+  <option value="Proveedor VIP">Proveedor VIP</option>
+</select>
+<button onclick="createUser()">Crear Usuario</button>  
+  
+<h3>Filtros</h3>  
+<select id="filterStatus" onchange="loadUsers()">  
+<option value="all">Todos</option>  
+<option value="vigente">Vigentes</option>  
+<option value="expirado">Expirados</option>  
+</select>  
+<button onclick="renewAll()">Renovar Todo +30 días</button>  
+  
+<h3>Listado de Usuarios</h3>  
+<table>  
+<thead>  
+<tr>  
+<th>Usuario</th>  
+<th>Correo</th>  
+<th>Contraseña</th>  
+<th>Nombre</th>  
+<th>WhatsApp</th>  
+<th>Vence</th>  
+<th>Días</th>  
+<th>Acciones</th>  
+</tr>  
+</thead>  
+<tbody id="usersList"></tbody>  
+</table>  
+</div>  
+  <div id="tokens" class="box" style="display:none;">
+
+<h2>Generar Token</h2>
+
+<input id="tokenName" placeholder="Nombre">
+<input id="tokenEmail" placeholder="Correo">
+<input id="tokenPass" placeholder="Contraseña">
+
+<button onclick="generateToken()">
+Generar Token
+</button>
+
+<div id="tokenResult"></div>
+
+<h3>Listado</h3>
+
+<table>
+<thead>
+<tr>
+<th>Token</th>
+<th>Nombre</th>
+<th>Correo</th>
+<th>Estado</th>
+</tr>
+</thead>
+
+<tbody id="tokensList"></tbody>
+
+</table>
+
+</div>
+<!-- CONFIGURACIÓN -->  
+<div id="settings" class="box" style="display:none;">  
+<h2>Configuración</h2>  
+
+<button onclick="toggleMaintenance()">🛠️ Modo Mantenimiento</button>  
+<p id="maintStatus">Estado mantenimiento: DESACTIVADO</p>
+ 
+</div>  
+  
+<!-- MODAL EDITAR -->
+<div class="modal-overlay" id="modalEdit" style="display:none;">
+  <div class="modal-box">
+    <h3>Editar Usuario</h3>
+    <input id="editUser" disabled>
+    <input id="editEmail" placeholder="Correo"> <!-- Cambiado de newEmail a editEmail -->
+    <input id="editPass" placeholder="Contraseña">
+    <input id="editName" placeholder="Nombre">
+    <input id="editPhone" placeholder="WhatsApp">
+    <input
+  id="editExpire"
+  type="number"
+  placeholder="Agregar días (7, 30, 60...)">
+    <select id="editRole">
+        <option value="selecciona proveedor">Selecciona proveedor</option>
+        <option value="Proveedor Básico">Proveedor Básico</option>
+  <option value="Proveedor Standard">Proveedor Standard</option>
+  <option value="Proveedor Premium">Proveedor Premium</option>
+  <option value="Proveedor VIP">Proveedor VIP</option>
+    </select>
+    <button onclick="saveEdit()">Guardar</button>
+    <button onclick="closeModal()">Cancelar</button>
+  </div>
+</div>
+  
+<!-- LOGIN MODAL -->  
+<div id="loginOverlay">  
+  <div id="loginBox" class="box">  
+    <h2>Iniciar Sesión</h2>  
+    <input id="email" placeholder="Correo">  
+    <input id="password" type="password" placeholder="Contraseña">  
+    <button id="btnLogin">Entrar</button>
+    <p id="error" style="color:#ef4444;display:none;">Credenciales incorrectas</p>  
+  </div>  
+</div>  
+  
+<script src="js/firebase-config.js"></script>
+<script type="module" src="js/admin.js"></script>
+</body>  
+</html> 

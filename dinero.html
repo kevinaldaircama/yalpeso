@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enviar Saldo</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#720e9e">
+<link rel="icon" type="image/png" href="imagen/app_icon_xxxhdpi.png">
+<link rel="stylesheet" href="css/dinero.css">
+</head>
+<body>
+
+<div class="card" id="card">
+  <h2>💸 Enviar Saldo</h2>
+
+  <!-- Paso 1: Teléfono -->
+  <div id="paso1">
+    <input type="tel" id="telefono" placeholder="Número de teléfono">
+    <button id="btnSiguiente">Siguiente</button>
+    <p id="mensaje"></p>
+  </div>
+
+  <!-- Paso 2: Monto -->
+  <div class="usuarioInfo" id="usuarioInfo">
+    <p><strong>Nombre:</strong> <span id="nombre"></span></p>
+    <input type="number" id="montoEnviar" placeholder="Monto a enviar">
+    <button id="btnEnviar">Enviar</button>
+    <p id="mensajeMonto"></p>
+  </div>
+
+  <!-- Pantalla de éxito -->
+  <div class="success" id="success">
+    <h2>✅ Saldo Enviado</h2>
+    <p>Transferencia realizada con éxito</p>
+  </div>
+</div>
+
+<script src="js/firebase-config.js"></script>
+<script type="module" src="js/dinero.js"></script>
+
+</body>
+</html>

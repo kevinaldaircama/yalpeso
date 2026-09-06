@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Compra exitosa</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#720e9e" />
+  <link rel="icon" type="image/png" href="imagen/app_icon_xxxhdpi.png">
+
+  <link rel="stylesheet" href="css/exitosa.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="logo-top">
+      <img src="imagen/yapelog.png" alt="Yape logo">
+    </div>
+
+    <div class="card">
+      <h2 class="success-title">¡Compra exitosa!</h2>
+      <div class="price"><small>S/</small><span id="monto">0.00</span></div>
+      <div class="date" id="fecha"></div>
+
+      <div class="brand-name" id="marca">GARENA</div>
+      <div class="desc" id="detalle"></div>
+
+      <div class="info-box">
+        <div class="info-title">¿Cómo canjear tu código?</div>
+
+        <ol class="steps">
+          <li>Ingresa a pagostore.garena.com</li>
+          <li>Inicia sesión con tu ID de jugador.</li>
+          <li>Selecciona Yape y pega el código.</li>
+          <li>Listo 🎉</li>
+        </ol>
+
+        <div class="code-section">
+          <div class="code-pill" id="code"></div>
+          <br>
+          <button class="copy-btn" id="copyBtn">📋 Copiar código</button>
+        </div>
+
+        <button class="btn-primary" id="canjearBtn">
+          Ir a canjear →
+        </button>
+
+        <a href="#" class="terms">Ver términos y condiciones</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/exitosa.js"></script>
+</body>
+</html>

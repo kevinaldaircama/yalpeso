@@ -1,0 +1,277 @@
+<!DOCTYPE html><html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registrar Huella</title>
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:system-ui,-apple-system,sans-serif;
+}
+
+body{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:
+    linear-gradient(
+      180deg,
+      #8d2c8f,
+      #5f1763
+    );
+  padding:20px;
+}
+
+.card{
+  width:100%;
+  max-width:400px;
+  background:#fff;
+  border-radius:30px;
+  padding:40px 30px;
+  text-align:center;
+  box-shadow:
+    0 20px 50px
+    rgba(0,0,0,.25);
+}
+
+.icon{
+  width:120px;
+  height:120px;
+  margin:auto;
+  border-radius:50%;
+  background:
+    linear-gradient(
+      135deg,
+      #a945ab,
+      #7B2C83
+    );
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:60px;
+  color:#fff;
+  box-shadow:
+    0 10px 25px
+    rgba(123,44,131,.35);
+}
+
+h2{
+  margin-top:30px;
+  color:#222;
+  font-size:28px;
+}
+
+p{
+  margin-top:15px;
+  color:#666;
+  line-height:1.6;
+  font-size:15px;
+}
+
+button{
+  width:100%;
+  border:none;
+  margin-top:35px;
+  padding:17px;
+  border-radius:18px;
+  background:
+    linear-gradient(
+      135deg,
+      #8d2c8f,
+      #6f1e75
+    );
+  color:#fff;
+  font-size:17px;
+  font-weight:600;
+  cursor:pointer;
+  transition:.25s;
+}
+
+button:hover{
+  transform:translateY(-2px);
+}
+
+button:active{
+  transform:scale(.98);
+}
+
+button:disabled{
+  opacity:.7;
+  cursor:not-allowed;
+}
+
+#estado{
+  margin-top:25px;
+  min-height:22px;
+  color:#555;
+  font-size:14px;
+}
+
+.ok{
+  color:#16a34a;
+}
+
+.error{
+  color:#dc2626;
+}
+
+.info{
+  color:#2563eb;
+}
+
+.huella{
+  animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+  0%{
+    transform:scale(1);
+  }
+  50%{
+    transform:scale(1.08);
+  }
+  100%{
+    transform:scale(1);
+  }
+}
+</style><div class="card">  <div
+    class="icon huella"
+    id="icon">
+    🖐️
+  </div>  <h2>
+    Registrar huella digital
+  </h2>  <p>
+    Activa el acceso biométrico para ingresar de forma más rápida y segura.
+  </p>  <button id="btnHuella">
+    Registrar huella
+  </button>  <div id="estado"></div></div><script>
+const btn =
+  document.getElementById(
+    "btnHuella"
+  );
+
+const estado =
+  document.getElementById(
+    "estado"
+  );
+
+btn.onclick =
+  registrarHuella;
+
+async function registrarHuella(){
+
+  try{
+
+    btn.disabled = true;
+
+    estado.className =
+      "info";
+
+    estado.textContent =
+      "Verificando dispositivo...";
+
+    if(
+      !window.PublicKeyCredential
+    ){
+      throw new Error(
+        "Este navegador no soporta biometría."
+      );
+    }
+
+    const disponible =
+      await PublicKeyCredential
+      .isUserVerifyingPlatformAuthenticatorAvailable();
+
+    if(!disponible){
+      throw new Error(
+        "No hay huella configurada."
+      );
+    }
+
+    estado.textContent =
+      "Coloca tu huella digital...";
+
+    const credential =
+      await navigator
+      .credentials
+      .create({
+        publicKey:{
+          challenge:
+            crypto.getRandomValues(
+              new Uint8Array(32)
+            ),
+
+          rp:{
+            name:"Yape"
+          },
+
+          user:{
+            id:
+              crypto.getRandomValues(
+                new Uint8Array(16)
+              ),
+            name:
+              "usuario",
+            displayName:
+              "Usuario"
+          },
+
+          pubKeyCredParams:[
+            {
+              type:
+                "public-key",
+              alg:-7
+            }
+          ],
+
+          authenticatorSelection:{
+            authenticatorAttachment:
+              "platform",
+            userVerification:
+              "required"
+          },
+
+          timeout:60000
+        }
+      });
+
+    localStorage.setItem(
+      "credentialId",
+      credential.id
+    );
+
+    localStorage.setItem(
+      "huellaRegistrada",
+      "true"
+    );
+
+    estado.className =
+      "ok";
+
+    estado.textContent =
+      "✅ Huella registrada correctamente.";
+
+    btn.textContent =
+      "Huella registrada";
+
+    console.log(
+      credential
+    );
+
+  }catch(e){
+
+    console.error(e);
+
+    estado.className =
+      "error";
+
+    estado.textContent =
+      "❌ " + e.message;
+
+    btn.disabled = false;
+  }
+}
+</script>

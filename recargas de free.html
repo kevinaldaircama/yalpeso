@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Free Fire - Recarga</title>
+
+<link rel="manifest" href="manifest.json" />  
+<meta name="theme-color" content="#720e9e" />  
+<link rel="icon" type="image/png" href="imagen/app_icon_xxxhdpi.png">     
+
+<link rel="stylesheet" href="css/free.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="topbar">
+  <button class="btn" onclick="history.back()">
+    <i class="fa-solid fa-arrow-left" style="color:white;"></i>
+  </button>
+  <h1>Gaming</h1>
+</div>
+
+<div class="page">
+  <div class="banner"></div>
+
+  <div class="card">
+    <div class="product-title">Free Fire Garena - ID</div>
+    <div class="from">Vendido por GARENA</div>
+    <p class="price">Desde S/ 3.50</p>
+    <p class="description">
+      Recarga directa de Free Fire, solo válido para Perú.
+      Sumérgete en la acción del battle royale más popular.
+    </p>
+  </div>
+
+  <div class="options-wrap">
+    <h3>Elegir opciones:</h3>
+    <div class="option" data-package="100 Diamantes + 10% Bonus" data-price="3.50">💎 100 + 10% Bonus <b>S/ 3.50</b></div>
+    <div class="option" data-package="310 Diamantes + 10% Bonus" data-price="9.90">💎 310 + 10% Bonus <b>S/ 9.90</b></div>
+    <div class="option" data-package="520 Diamantes + 10% Bonus" data-price="16.50">💎 520 + 10% Bonus <b>S/ 16.50</b></div>
+    <div class="option" data-package="1060 Diamantes + 10% Bonus" data-price="32.90">💎 1060 + 10% Bonus <b>S/ 32.90</b></div>
+    <div class="option" data-package="2180 Diamantes + 10% Bonus" data-price="64.90">💎 2180 + 10% Bonus <b>S/ 64.90</b></div>
+  </div>
+
+  <div class="faq-section">
+    <h3>¿Cómo canjear tu código?</h3>
+    <ol>
+      <li>Selecciona el monto que deseas recargar.</li>
+      <li>Ingresa tu <strong>ID de jugador</strong> correctamente.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="bottom-fixed">
+  <button id="continueBtn" class="continue-btn" disabled>Continuar</button>
+</div>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <h2>Completa tus datos</h2>
+
+    <div class="form-group">
+      <label>ID del jugador</label>
+      <input type="text" id="playerId" placeholder="Ej. 9645932788">
+    </div>
+
+    <div class="form-group">
+      <label>Nombre de usuario</label>
+      <input type="text" id="userName" placeholder="Ej. TEAM©MESSI">
+    </div>
+
+    <div class="form-group">
+      <label>Monto (S/)</label>
+      <input type="text" id="amount" readonly>
+    </div>
+
+    <div class="form-group">
+      <label>Paquete</label>
+      <input type="text" id="package" readonly>
+    </div>
+
+    <button id="payBtn" class="modal-btn">Pagar</button>
+    <div class="close-btn" id="closeModal">Cancelar</div>
+  </div>
+</div>
+
+<script src="js/free.js"></script>
+</body>
+</html>

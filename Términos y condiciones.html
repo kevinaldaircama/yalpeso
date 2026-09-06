@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Términos y Condiciones</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: "Segoe UI", Arial, sans-serif;
+            color: #fff;
+            background:
+                radial-gradient(circle at 15% 20%, rgba(0, 255, 200, .12), transparent 30%),
+                radial-gradient(circle at 85% 80%, rgba(120, 70, 255, .16), transparent 30%),
+                #05070c;
+            overflow-x: hidden;
+        }
+
+        /* FONDO ANIMADO */
+
+        body::before,
+        body::after {
+            content: "";
+            position: fixed;
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: .35;
+            z-index: -1;
+            animation: float 8s ease-in-out infinite alternate;
+        }
+
+        body::before {
+            background: #00ffd5;
+            top: -120px;
+            left: -120px;
+        }
+
+        body::after {
+            background: #6c3cff;
+            bottom: -120px;
+            right: -120px;
+            animation-delay: 2s;
+        }
+
+        @keyframes float {
+            from {
+                transform: translate(0, 0);
+            }
+            to {
+                transform: translate(50px, 35px);
+            }
+        }
+
+        /* CONTENEDOR */
+
+        .container {
+            width: min(950px, 94%);
+            margin: 40px auto;
+            padding: 30px;
+            border: 1px solid rgba(255,255,255,.09);
+            border-radius: 28px;
+            background: rgba(10, 13, 21, .82);
+            backdrop-filter: blur(20px);
+            box-shadow:
+                0 25px 80px rgba(0,0,0,.55),
+                inset 0 1px rgba(255,255,255,.04);
+        }
+
+        /* CABECERA */
+
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .icon-header {
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 22px;
+            font-size: 30px;
+            color: #00ffd5;
+            background: rgba(0,255,213,.08);
+            border: 1px solid rgba(0,255,213,.2);
+            box-shadow: 0 0 35px rgba(0,255,213,.12);
+        }
+
+        h1 {
+            font-size: clamp(25px, 5vw, 42px);
+            letter-spacing: 1px;
+            font-weight: 800;
+        }
+
+        h1 span {
+            color: #00ffd5;
+        }
+
+        .subtitle {
+            margin-top: 8px;
+            color: #8e98aa;
+            font-size: 15px;
+        }
+
+        /* AVISO */
+
+        .notice {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 16px;
+            margin: 25px 0;
+            border-radius: 15px;
+            background: rgba(255,193,7,.07);
+            border: 1px solid rgba(255,193,7,.18);
+            color: #dce0e8;
+            font-size: 14px;
+        }
+
+        .notice i {
+            color: #ffc107;
+            font-size: 20px;
+        }
+
+        /* BARRA DE PROGRESO */
+
+        .progress-area {
+            margin-bottom: 18px;
+        }
+
+        .progress-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 7px;
+            font-size: 12px;
+            color: #778196;
+        }
+
+        .progress {
+            width: 100%;
+            height: 5px;
+            overflow: hidden;
+            border-radius: 10px;
+            background: #161b27;
+        }
+
+        .progress-bar {
+            width: 0%;
+            height: 100%;
+            border-radius: inherit;
+            background: linear-gradient(90deg, #00ffd5, #6c5cff);
+            transition: width .2s ease;
+        }
+
+        /* CAJA DE TÉRMINOS */
+
+        .terms-box {
+            max-height: 570px;
+            overflow-y: auto;
+            padding: 8px 10px 8px 4px;
+            scroll-behavior: smooth;
+        }
+
+        /* SCROLLBAR */
+
+        .terms-box::-webkit-scrollbar {
+            width: 7px;
+        }
+
+        .terms-box::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .terms-box::-webkit-scrollbar-thumb {
+            background: #252c3b;
+            border-radius: 10px;
+        }
+
+        .terms-box::-webkit-scrollbar-thumb:hover {
+            background: #00bfa5;
+        }
+
+        /* TERMINOS */
+
+        .term {
+            position: relative;
+            display: flex;
+            gap: 17px;
+            padding: 19px;
+            margin-bottom: 12px;
+            border-radius: 18px;
+            background: rgba(255,255,255,.025);
+            border: 1px solid rgba(255,255,255,.055);
+            transition:
+                transform .25s ease,
+                border-color .25s ease,
+                background .25s ease;
+        }
+
+        .term:hover {
+            transform: translateX(5px);
+            border-color: rgba(0,255,213,.22);
+            background: rgba(0,255,213,.035);
+        }
+
+        .term-icon {
+            flex: 0 0 43px;
+            width: 43px;
+            height: 43px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 13px;
+            color: #00ffd5;
+            background: rgba(0,255,213,.08);
+            font-size: 18px;
+        }
+
+        .term p {
+            align-self: center;
+            line-height: 1.55;
+            color: #cbd1dc;
+            font-size: 14px;
+        }
+
+        .term strong {
+            color: #fff;
+        }
+
+        /* BOTÓN */
+
+        .footer {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,.06);
+        }
+
+        .accept-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            color: #8e98aa;
+            font-size: 13px;
+        }
+
+        .accept-row input {
+            width: 18px;
+            height: 18px;
+            accent-color: #00ffd5;
+        }
+
+        .btn {
+            width: 100%;
+            border: 0;
+            padding: 16px;
+            border-radius: 15px;
+            color: #03100e;
+            font-size: 15px;
+            font-weight: 800;
+            cursor: pointer;
+            background: linear-gradient(135deg, #00ffd5, #00c9a9);
+            box-shadow: 0 10px 30px rgba(0,255,213,.15);
+            transition: .25s ease;
+        }
+
+        .btn:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(0,255,213,.25);
+        }
+
+        .btn:disabled {
+            cursor: not-allowed;
+            opacity: .35;
+            filter: grayscale(1);
+        }
+
+        .status {
+            text-align: center;
+            margin-top: 12px;
+            font-size: 12px;
+            color: #697386;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            .container {
+                width: 94%;
+                margin: 18px auto;
+                padding: 19px;
+                border-radius: 22px;
+            }
+
+            .icon-header {
+                width: 60px;
+                height: 60px;
+                font-size: 25px;
+            }
+
+            .terms-box {
+                max-height: 58vh;
+            }
+
+            .term {
+                padding: 15px;
+                gap: 12px;
+            }
+
+            .term-icon {
+                flex-basis: 38px;
+                width: 38px;
+                height: 38px;
+                font-size: 15px;
+            }
+
+            .term p {
+                font-size: 13px;
+            }
+
+            .notice {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+
+        <div class="icon-header">
+            <i class="fa-solid fa-file-contract"></i>
+        </div>
+
+        <h1>
+            <span>TÉRMINOS</span> Y CONDICIONES
+        </h1>
+
+        <p class="subtitle">
+            Por favor, lee cuidadosamente antes de continuar
+        </p>
+
+    </div>
+
+    <div class="notice">
+        <i class="fa-solid fa-circle-info"></i>
+
+        <div>
+            <strong>Importante:</strong>
+            al realizar una compra confirmas que has leído y comprendido
+            las condiciones del servicio.
+        </div>
+    </div>
+
+    <!-- PROGRESO -->
+
+    <div class="progress-area">
+
+        <div class="progress-info">
+            <span>Lectura de términos</span>
+            <span id="progressText">0%</span>
+        </div>
+
+        <div class="progress">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+    </div>
+
+    <!-- TERMINOS -->
+
+    <div class="terms-box" id="termsBox">
+
+        <div class="term">
+            <div class="term-icon">
+                <i class="fa-solid fa-ban"></i>
+            </div>
+
+            <p>
+                No se aceptan devoluciones si no se solicitó previamente
+                orientación al administrador o propietario.
+            </p>
+        </div>
+
+        <div class="term">
+            <div class="term-icon">
+                <i class="fa-solid fa-headset"></i>
+            </div>
+
+            <p>
+                El soporte puede tardar dependiendo de la disponibilidad
+                del administrador o propietario.
+            </p>
+        </div>
+
+        <div class="term">
+            <div class="term-icon">
+                <i class="fa-solid fa-circle-question"></i>
+            </div>
+
+            <p>
+                Debes realizar todas tus preguntas antes de comprar.
+                Asegúrate de conocer correctamente el servicio que estás adquiriendo.
+            </p>
+        </div>
+
+        <div class="term">
+            <div class="term-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+
+            <p>
+                Se ofrece garantía siempre que se respeten las condiciones
+                del servicio y no se haya realizado una reventa no autorizada.
+            </p>
+        </div>
+
+        <div class="term">
+            <div class="term-icon">
+                <i class="fa-solid fa-users"></i>
+            </div>
+
+            <p>
+                Debido a la alta demanda, la atención puede presentar
+                tiempos de espera. Agradecemos tu paciencia.
+            </p>
+        </div>
+
+        <div class="term">
+            <div class="term-icon">
+                <i class="fa-solid fa-lock"></i>
+            </div>
+
+            <p>
+                Los precios pueden variar y no necesariamente son permanentes.
+            </p>
+        </div>
+
+        <div class="term">
+            <div class="term-icon">
+                <i class="fa-solid fa-user-shield"></i>
+            </div>
+
+            <p>
+                El uso indebido del servicio puede ocasionar la pérdida
+                de la garantía o del derecho a reembolso.
+            </p>
+        </div>
+
+        <div class="term">
+            <div class="term-icon">
+                <i class="fa-solid fa-clock"></i>
+            </div>
+
+            <p>
+                Antes de realizar una compra, verifica cuidadosamente
+                las condiciones, precio y características del servicio.
+            </p>
+        </div>
+
+        <div class="term">
+            <div class="term-icon">
+                <i class="fa-solid fa-repeat"></i>
+            </div>
+
+            <p>
+                No se permite la reventa del servicio sin autorización previa.
+            </p>
+        </div>
+
+        <div class="term">
+            <div class="term-icon">
+                <i class="fa-solid fa-check-circle"></i>
+            </div>
+
+            <p>
+                Al comprar, confirmas que has leído, comprendido y aceptado
+                todos estos términos y condiciones.
+            </p>
+        </div>
+
+        <!-- FINAL -->
+
+        <div style="
+            text-align:center;
+            padding:25px 10px 10px;
+            color:#00ffd5;
+            font-size:13px;
+        ">
+            <i class="fa-solid fa-circle-check"></i>
+            Has llegado al final de los términos
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+
+        <label class="accept-row">
+            <input type="checkbox" id="acceptCheck">
+            <span>He leído y acepto los términos y condiciones.</span>
+        </label>
+
+        <button class="btn" id="acceptBtn" disabled>
+            <i class="fa-solid fa-lock"></i>
+            ACEPTAR TÉRMINOS
+        </button>
+
+        <div class="status" id="status">
+            Desplázate hasta el final para continuar.
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+const termsBox = document.getElementById("termsBox");
+const progressBar = document.getElementById("progressBar");
+const progressText = document.getElementById("progressText");
+const acceptCheck = document.getElementById("acceptCheck");
+const acceptBtn = document.getElementById("acceptBtn");
+const status = document.getElementById("status");
+
+let reachedEnd = false;
+
+/* PROGRESO DE LECTURA */
+
+termsBox.addEventListener("scroll", () => {
+
+    const scrollTop = termsBox.scrollTop;
+    const scrollHeight = termsBox.scrollHeight - termsBox.clientHeight;
+
+    let percentage = 0;
+
+    if (scrollHeight > 0) {
+        percentage = Math.round(
+            (scrollTop / scrollHeight) * 100
+        );
+    }
+
+    if (percentage >= 98) {
+        percentage = 100;
+        reachedEnd = true;
+
+        status.textContent =
+            "Ahora puedes aceptar los términos.";
+
+        status.style.color = "#00ffd5";
+    }
+
+    progressBar.style.width = percentage + "%";
+    progressText.textContent = percentage + "%";
+
+    updateButton();
+});
+
+/* CHECKBOX */
+
+acceptCheck.addEventListener("change", updateButton);
+
+function updateButton() {
+
+    if (reachedEnd && acceptCheck.checked) {
+
+        acceptBtn.disabled = false;
+
+        acceptBtn.innerHTML =
+            '<i class="fa-solid fa-circle-check"></i> CONFIRMAR ACEPTACIÓN';
+
+    } else {
+
+        acceptBtn.disabled = true;
+
+        acceptBtn.innerHTML =
+            '<i class="fa-solid fa-lock"></i> ACEPTAR TÉRMINOS';
+    }
+}
+
+
+acceptBtn.addEventListener("click", () => {
+
+    if (!reachedEnd || !acceptCheck.checked) return;
+
+    acceptBtn.innerHTML =
+        '<i class="fa-solid fa-check"></i> TÉRMINOS ACEPTADOS';
+
+    status.textContent =
+        "Términos aceptados. Redirigiendo a planes...";
+
+    status.style.color = "#00ffd5";
+
+    setTimeout(() => {
+        window.location.href = "planes";
+    }, 700);
+
+});
+</script>
+
+</body>
+</html>

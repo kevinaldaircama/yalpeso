@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yape - Pago</title>
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#720e9e">
+<link rel="icon" href="imagen/app_icon_xxxhdpi.png">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/foto.css">
+</head>
+
+<body>
+
+<div class="phone">
+    <div class="card" id="comprobanteCompleto">
+
+        <div class="top-bar">
+            <img src="imagen/yapelog.png" alt="Logo" class="logo">
+            <i class="fa-solid fa-xmark close-icon"></i>
+        </div>
+
+        <div class="header-white">
+            <div class="title">
+                ¡Yapeaste el servicio!
+                <span class="share" id="shareBtn">
+                    <i class="fa-solid fa-share-nodes"></i> Compartir
+                </span>
+            </div>
+
+            <div class="amount">
+                <span class="currency">S/</span> <span id="monto">0.00</span>
+            </div>
+
+            <div class="service" id="empresa">—</div>
+
+            <div class="date-time">
+                <div><i class="fa-regular fa-calendar"></i> <span id="fecha">—</span></div>
+                <div><i class="fa-regular fa-clock"></i> <span id="hora">—</span></div>
+            </div>
+
+            <div class="divider"></div>
+            <div class="section-title">DATOS DE LA TRANSACCIÓN</div>
+
+            <div class="row">
+                <span>Servicio:</span>
+                <span id="servicio">—</span>
+            </div>
+
+            <div class="row">
+                <span>Código de cliente:</span>
+                <span id="codigo">—</span>
+            </div>
+
+            <div class="row">
+                <span>Titular:</span>
+                <span id="titular">—</span>
+            </div>
+
+            <div class="row">
+                <span>N° de operación:</span>
+                <span id="operacion"></span>
+            </div>
+        </div>
+
+        <button class="button" id="volverBtn">
+            <i class="fa-solid fa-mobile-screen"></i> Yapear otro servicio
+        </button>
+
+        <div id="bannerServicio" class="banner-img">
+            <img src="imagen/Screenshot_20251228-140925~2.jpg" alt="Servicios disponibles">
+        </div>
+
+    </div>
+</div>
+
+<!-- Librerías -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<script src="js/foto.js"></script>
+</body>
+</html>

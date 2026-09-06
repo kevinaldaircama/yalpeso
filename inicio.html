@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iniciar Sesión</title>
+<!-- PWA -->
+  <link rel="manifest" href="manifest.json" />  
+  <meta name="theme-color" content="#720e9e" />  
+  <link rel="icon" type="image/png" href="imagen/app_icon_xxxhdpi.png">
+<!-- FIREBASE v8 -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="stylesheet" href="css/inicio.css">
+</head>
+
+<div class="header">
+  <div class="header-top">
+    <span onclick="volver()"><i class="fa-solid fa-arrow-left"></i></span>
+    <h1>Iniciar Sesión</h1>
+  </div>
+  <p>Ingresa tus credenciales para acceder a tu cuenta.</p>
+</div>
+
+<div class="container">
+
+  <div class="input-group">
+    <input type="email" id="correo" placeholder="Correo electrónico">
+  </div>
+
+  <div class="input-group">
+    <input type="password" id="clave" placeholder="Contraseña">
+  </div>
+
+  <button class="btn" onclick="iniciarSesion()">Ingresar</button>
+
+  <div class="extra">
+    ¿No tienes cuenta? <a href="registrovip">Crear cuenta</a>
+    <br><br>
+    <a href="#" onclick="recuperarPassword()">¿Olvidaste tu contraseña?</a>
+  </div>
+
+  <div class="info-box">
+    🔐 Tu información está protegida y cifrada.
+  </div>
+
+</div>
+
+<!-- MODAL -->
+<div id="modal">
+  <div id="modal-content"></div>
+</div>
+
+
+<script src="js/firebase-config.js"></script>
+<script src="js/inicio.js"></script>
+
+</body>
+  </html>

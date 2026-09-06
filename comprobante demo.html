@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Comprobante Yape</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="manifest" href="manifest.json" />  
+  <meta name="theme-color" content="#720e9e" />  
+  <link rel="icon" type="image/png" href="imagen/app_icon_xxxhdpi.png">   
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/comprobante.css">
+</head>
+<body>
+  <div class="container" id="comprobante">
+    <div class="logo">
+      <img src="imagen/yapelog.png" alt="Logo" style="height:40px;">
+      <div class="cerrar" onclick="window.history.back()">×</div>
+    </div>
+
+    <div class="card">
+      <h2>
+        ¡Yapeaste!
+        <span class="share" onclick="compartir()">
+          <i class="fas fa-share-alt"></i> COMPARTIR
+        </span>
+      </h2>
+
+      <div class="monto">
+  <span class="simbolo">S/</span>
+  <span id="monto">0</span>
+      </div>
+      <div class="nombre" id="nombre">Nombre</div>
+
+      <!-- Fecha y hora -->
+      <div class="datos">
+        <span id="fecha"><i class="far fa-calendar-alt"></i> <span></span></span>
+        <span class="separator">|</span>
+        <span id="hora"><i class="far fa-clock"></i> <span></span></span>
+      </div>
+      
+<div id="estado-box" style="display:none;">
+  <div class="estado-icon">
+
+    <svg viewBox="0 0 24 24" class="icono-msg">
+      <path
+        d="M4 5C4 4.4 4.4 4 5 4H19C19.6 4 20 4.4 20 5V15C20 15.6 19.6 16 19 16H8L4 20V5Z"
+        fill="white"
+      />
+
+      <rect x="7" y="8" width="10" height="1.5" fill="#4b2d5e"/>
+      <rect x="7" y="11" width="7" height="1.5" fill="#4b2d5e"/>
+
+    </svg>
+
+  </div>
+
+  <span id="estado-texto" class="estado-texto"></span>
+</div>
+      <!-- Código de seguridad -->
+      <div class="seguridad-box">
+        <div class="seguridad-header">
+          <span class="label-seguridad">CÓDIGO DE SEGURIDAD</span>
+          <img src="imagen/sello.jpg" alt="icono seguridad" class="icono-seguridad">
+        </div>
+        <div class="codigo" id="codigo-seguridad">
+          <div class="caja">-</div>
+          <div class="caja">-</div>
+          <div class="caja">-</div>
+        </div>
+      </div>
+
+      <div class="transaccion-title">DATOS DE LA TRANSACCIÓN</div>
+
+      <div class="info">
+        <p><strong>Nro. de celular</strong> <span id="telefono">*********</span></p>
+        <p><strong>Destino</strong> <span>Yape</span></p>
+        <p><strong>Nro. de operación</strong> <span id="operacion">---</span></p>
+      </div>
+    </div>
+
+    <img class="footer-img" id="promo-img" src="imagen/1.jpg" alt="Promoción" />
+  </div>
+
+  <script src="js/genedemo.js"></script>
+</body>
+</html>

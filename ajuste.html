@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Perfil</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#720e9e">
+<link rel="icon" type="image/png" href="imagen/app_icon_xxxhdpi.png">
+
+<link rel="stylesheet" href="css/ajuste.css">
+</head>
+
+<body>
+<div class="container">
+
+  <div class="top-bar">
+    <h2>Mi Perfil</h2>
+    <div class="option" onclick="window.location.href='ayuda.html'">
+      <i class="fa-solid fa-headset"></i> Ayuda
+    </div>
+  </div>
+
+  <div class="section-title">Mi cuenta</div>
+  <a href="mis-datos.html"><div class="item"><i class="fa-solid fa-id-card"></i><span>Mis datos</span></div></a>
+  <a href="#"><div class="item"><i class="fa-solid fa-qrcode"></i><span>Mi QR</span></div></a>
+  <a href="clave.html"><div class="item"><i class="fa-solid fa-key"></i><span>Cambiar clave</span></div></a>
+  <a href="#"><div class="item"><i class="fa-solid fa-map-marker-alt"></i><span>Mis direcciones</span></div></a>
+  <a href="perfil.html"><div class="item"><i class="fa-solid fa-cog"></i><span>Ajustes</span></div></a>
+
+  <div class="section-title">Ajustes</div>
+  <a href="huella"><div class="item"><i class="fa-solid fa-fingerprint"></i><span>Biometría digital</span><div class="activar-btn">Activar</div></div></a>
+  <a href="#"><div class="item"><i class="fa-solid fa-shopping-cart"></i><span>Compras por internet y POS</span></div></a>
+  <a href="#"><div class="item"><i class="fa-solid fa-info-circle"></i><span>Confirmación de yapeo alto</span></div></a>
+  <a href="#"><div class="item"><i class="fa-solid fa-chart-bar"></i><span>Límites Transaccionales</span></div></a>
+  <a href="#"><div class="item"><i class="fa-solid fa-bell"></i><span>Notificaciones por yapeo</span></div></a>
+
+  <div class="section-title">Información de la App</div>
+  <div class="info-text">
+    <p><strong>Versión Yape:</strong> 3.49.0</p>
+    <p><strong>Tipo de cuenta:</strong> Yape con DNI</p>
+    <p><strong>Banco de Crédito del Perú</strong></p>
+    <p><strong>RUC:</strong> 20100047218</p>
+  </div>
+
+  <a href="https://www.yape.com.pe/terminos-y-condiciones/yape-persona" target="_blank">
+    <div class="item"><i class="fa-solid fa-file-alt"></i><span>Términos y condiciones</span></div>
+  </a>
+  <a href="https://www.yape.com.pe/politica-privacidad-datos/yape" target="_blank">
+    <div class="item"><i class="fa-solid fa-lock"></i><span>Política de privacidad</span></div>
+  </a>
+
+  <div class="item" onclick="cerrarSesion()">
+    <i class="fa-solid fa-sign-out-alt"></i><span>Cerrar sesión</span>
+  </div>
+
+</div>
+
+<!-- Script de Firebase como módulo -->
+<script src="js/firebase-config.js"></script>
+<script type="module" src="js/ajuste.js"></script>
+
+</body>
+</html>

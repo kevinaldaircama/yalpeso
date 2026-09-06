@@ -1,0 +1,26 @@
+{
+  "id": "/",
+  "name": "yape",
+  "short_name": "yape",
+  "start_url": "/index.html",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#720e9e",
+  "theme_color": "#720e9e",
+  "orientation": "portrait",
+
+  "icons": [
+    {
+      "src": "/imagen/app_icon_xxxhdpi.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/imagen/app_icon_xxxhdpi.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ingreso</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#7B2C83">
+<link rel="icon" type="image/png" href="imagen/app_icon_xxxhdpi.png">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+
+<!-- PANTALLA DE MANTENIMIENTO -->
+<div id="maintenanceScreen" class="maintenance">
+  <i class="fa fa-tools"></i>
+  <h2>Sistema en Mantenimiento</h2>
+  <p>Estamos realizando mejoras, vuelve más tarde.</p>
+</div>
+
+<!-- TOP -->
+<div class="top">
+  <div class="qr">
+    <img src="imagen/qr.jpg">
+  </div>
+
+  <div class="options">
+    <div class="option" onclick="location.href='nueva-clave'">
+      <i class="fa-solid fa-lock"></i>
+      Olvide de clave
+    </div>
+    <div class="option">
+      <i class="fa-solid fa-mobile-screen"></i>
+      Cambio de número
+    </div>
+    <div class="option" onclick="window.location.href='ayuda'">
+  <i class="fa-solid fa-headset"></i>
+  Ayuda
+</div>
+  </div>
+</div>
+
+<!-- BOTTOM -->
+<div class="bottom">
+  <h3>Ingresa tu clave</h3>
+
+  <input type="password" id="clave" hidden maxlength="6">
+
+  <div class="dots" id="dots">
+    <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+    <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+  </div>
+
+  <div id="keypad"></div>
+</div>
+
+<!-- MODAL -->
+<div id="modal">
+  <div class="modal-box">
+    <p id="modal-text"></p>
+    <button onclick="modal.style.display='none'">Aceptar</button>
+  </div>
+</div>
+
+<script src="js/firebase-config.js"></script>
+<script type="module" src="js/login.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Envío QR</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="css/comprobanteqr.css">
+</head>
+<body>
+
+  <a href="home.html" class="cerrar">✕</a>
+
+  <div class="container">
+
+    <img src="imagen/yapelog.png"
+    style="width:70px;margin-bottom:10px">
+
+    <!-- ✅ agregado id -->
+    <div class="comprobante-box" id="comprobante">
+
+      <span class="titulo">¡Yapeaste!</span>
+
+      <!-- ✅ agregado onclick -->
+      <span class="compartir"
+      onclick="compartir()">
+        <i class="fa-solid fa-share-nodes"></i>
+        COMPARTIR
+      </span>
+
+      <div class="monto" id="monto">S/0</div>
+
+      <div class="nombre" id="nombre">---</div>
+
+      <div class="fecha-hora">
+
+        <i class="fa-solid fa-calendar-days"></i>
+        <span id="fecha"></span>
+
+        |
+
+        <i class="fa-solid fa-clock"></i>
+        <span id="hora"></span>
+
+      </div>
+
+      <div class="datos-transaccion">
+
+        <h4>DATOS DE LA TRANSACCIÓN</h4>
+
+        <div>
+          <span>Destino</span>
+          <span id="destino">---</span>
+        </div>
+
+        <div>
+          <span>Nro. de operación</span>
+          <span id="operacion"></span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="banner">
+      <img src="imagen/4.png">
+    </div>
+
+  </div>
+
+  <!-- ✅ necesario -->
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+  <script src="js/comprobanteqr.js"></script>
+
+</body>
+</html>

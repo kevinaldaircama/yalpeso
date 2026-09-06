@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guardar QR</title>
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#720e9e">
+<link rel="icon" href="imagen/app_icon_xxxhdpi.png">
+<link rel="stylesheet" href="css/qrsguadar.css">
+
+<!-- Librería para leer QR -->
+<script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.js"></script>
+</head>
+
+<body>
+
+<div class="form">
+  <h2>Guardar QR localmente</h2>
+  <input type="text" id="codigoQR" placeholder="Código único (contenido del QR)" />
+  <input type="text" id="nombreQR" placeholder="Nombre visible" />
+  <input type="text" id="destinoQR" placeholder="Destino (ej: Yape)" />
+  <input type="file" id="fotoQR" accept="image/*" />
+  <button id="btnGuardar">Guardar QR</button>
+</div>
+
+<script src="js/qrsguadar.js"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+:root{
+  --purple:#7B2C83;
+  --purple-dark:#5F1F65;
+  --gray:#ECECEC;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:system-ui;
+}
+
+body{ background:#fff; }
+
+/* MANTENIMIENTO */
+.maintenance{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:#7B2C83;
+  color:white;
+  z-index:9999;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  flex-direction:column;
+}
+
+.maintenance i{
+  font-size:50px;
+  margin-bottom:10px;
+}
+
+/* TOP */
+.top{
+  background:linear-gradient(180deg,var(--purple),var(--purple-dark));
+  padding:32px 16px 22px;
+  text-align:center;
+  color:#fff;
+}
+
+.qr{
+  width:210px;
+  height:210px;
+  background:#fff;
+  border-radius:16px;
+  margin:15px auto 22px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.qr img{ width:170px }
+
+.options{
+  display:flex;
+  justify-content:space-around;
+}
+
+.option{
+  font-size:13px;
+  cursor:pointer;
+}
+
+.option i{
+  font-size:22px;
+  background:rgba(255,255,255,.25);
+  width:50px;
+  height:50px;
+  border-radius:16px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 auto 6px;
+}
+
+/* BOTTOM */
+.bottom{ padding:24px 18px; }
+
+h3{
+  text-align:center;
+  color:var(--purple);
+  margin-bottom:14px;
+}
+
+.dots{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  margin-bottom:18px;
+}
+
+.dot{
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  background:#ddd;
+}
+
+.dot.active{ background:var(--purple); }
+
+/* KEYPAD */
+#keypad{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+
+#keypad button{
+  height:62px;
+  border-radius:14px;
+  border:none;
+  background:var(--gray);
+  font-size:24px;
+}
+
+#keypad i{
+  color:var(--purple);
+  font-size:26px;
+}
+
+/* MODAL */
+#modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.4);
+  justify-content:center;
+  align-items:center;
+}
+
+.modal-box{
+  background:#fff;
+  padding:22px;
+  border-radius:14px;
+  text-align:center;
+  width:80%;
+}
+
+.modal-box button{
+  margin-top:14px;
+  padding:8px 18px;
+  border:none;
+  border-radius:8px;
+  background:var(--purple);
+  color:#fff;
+}

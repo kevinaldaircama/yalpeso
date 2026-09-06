@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enviar Yape</title>
+<!-- PWA -->
+  <link rel="manifest" href="manifest.json" />  
+  <meta name="theme-color" content="#720e9e" />  
+  <link rel="icon" type="image/png" href="imagen/app_icon_xxxhdpi.png">
+  
+<link rel="stylesheet" href="css/envío.css">
+</head>
+
+<body>
+
+<div class="app">
+
+  <div class="topbar">
+    Enviar Pago
+  </div>
+
+  <div class="content">
+
+    <div class="label">Nombre de la persona</div>
+    <input type="text" id="nombre" placeholder="Ej: Juan Pérez">
+
+    <div class="label">Número de teléfono</div>
+    <input type="text" id="telefono" placeholder="Ej: 999888777">
+
+    <div class="label">Monto</div>
+    <input type="number" id="monto" placeholder="Ej: 20.50">
+
+    <div class="label">Destino</div>
+    <input type="text" id="destino" placeholder="Ej: Yape, Plin, BCP">
+
+    <button class="btn" id="continuarBtn">
+      Continuar
+    </button>
+
+  </div>
+
+  <div class="footer">
+    Simulador de envío estilo Yape
+  </div>
+
+</div>
+
+<script src="js/envío.js"></script>
+</body>
+</html>

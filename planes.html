@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Planes y Suscripciones</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#720e9e">
+<link rel="icon" href="imagen/app_icon_xxxhdpi.png">
+<link
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/planes.css">
+
+</head>
+
+<body>
+
+<!-- 🔥 MODAL -->
+<div id="modalPago">
+  <div class="modal-box">
+
+    <h2>Confirmar compra</h2>
+
+    <div class="info-plan">
+      <p><b>Plan:</b> <span id="planNombre"></span></p>
+      <p><b>Monto:</b> S/ <span id="planPrecio"></span></p>
+    </div>
+
+    <p class="txt-help">
+      ⚠️ Primero realiza el pago y luego completa el formulario.
+    </p>
+
+    <button onclick="irMP()" class="btn btn-mp">
+      💳 Pagar con Mercado Pago
+    </button>
+
+    <div class="formulario-pago">
+
+      <input type="text" id="nombre" placeholder="Nombre completo">
+
+      <input type="email" id="correo" placeholder="Correo electrónico">
+
+      <input type="text" id="idPago" placeholder="ID del pago">
+
+      <button onclick="confirmarPago()" class="btn btn-success">
+        Confirmar pago
+      </button>
+
+    </div>
+
+    <button onclick="cerrarModal()" class="close">
+      Cancelar
+    </button>
+
+  </div>
+</div>
+
+<!-- BOTÓN AYUDA -->
+<a href="soporte" class="help-btn">
+  <i class="fa-solid fa-headset"></i>
+</a>
+
+<header>
+  <h1>🔥 Elige tu Plan</h1>
+  <p>Android, iPhone o Sistema Propio. Todo incluido en una sola suscripción.</p>
+</header>
+<main class="container">
+
+<!-- PLAN ANDROID -->
+<div class="plan">
+  <span class="badge">📱 Android</span>
+
+  <h2>Plan Android</h2>
+
+  <div class="details">
+    <p><i class="fa fa-android"></i> Sistema Android</p>
+    <p><i class="fa fa-headset"></i> Soporte incluido</p>
+    <p><i class="fa fa-calendar"></i> Acceso permanente</p>
+  </div>
+
+  <p class="price" data-precio="60"></p>
+
+  <div class="btn" onclick="pagar('Plan Android',60)">
+    Comprar 🚀
+  </div>
+</div>
+
+<!-- PLAN IPHONE -->
+<div class="plan destacado">
+  <span class="badge pro">🔥 Popular</span>
+
+  <h2>Plan iPhone</h2>
+
+  <div class="details">
+    <p><i class="fa fa-mobile-screen"></i> Sistema iPhone</p>
+    <p><i class="fa fa-headset"></i> Soporte prioritario</p>
+    <p><i class="fa fa-calendar"></i> Acceso permanente</p>
+  </div>
+
+  <p class="price" data-precio="100"></p>
+
+  <div class="btn" onclick="pagar('Plan iPhone',100)">
+    Elegir 🔥
+  </div>
+</div>
+
+<!-- PLAN PROPIO -->
+<div class="plan premium">
+  <span class="badge premium-badge">👑 Premium</span>
+
+  <h2>Plan Propio</h2>
+
+  <div class="details">
+    <p><i class="fa fa-infinity"></i> Sistema propio</p>
+    <p><i class="fa fa-desktop"></i> Panel propio</p>
+    <p><i class="fa fa-headset"></i> Soporte dedicado</p>
+    <p><i class="fa fa-calendar"></i> Acceso mensual</p>
+  </div>
+
+  <p class="price" data-precio="300"></p>
+
+  <div class="btn" onclick="pagar('Plan Propio',300)">
+    Ir PRO 👑
+  </div>
+</div>
+
+</main>
+<script src="js/planes.js"></script>
+
+</body>
+</html>

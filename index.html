@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>yape fake</title>
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#720e9e">
+<link rel="icon" href="imagen/app_icon_xxxhdpi.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<!-- CSS externo -->
+<link rel="stylesheet" href="css/index.css">
+
+</head>
+<body>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="welcomeModal">
+  <div class="modal">
+    <div class="countdown" id="countdown">10</div>
+    <div class="close-btn" id="closeModal">✕</div>
+
+    <h2>Lee con atención</h2>
+    <p>Advertencia</p>
+    <p class="highlight">Los únicos autorizados para ventas son:</p>
+    <p class="highlight">desarrollador: Kevin tech tutorials<br> dueño: Kevin tech tutorials</p>
+    
+    <p>⚠️ Cualquier otro perfil no registrado puede ser una estafa.</p>
+    <p>Si tienes acceso ingresa, y si no pues no intentes acceder por las puras.</p>
+    <p>Los precios pueden subir dependiendo de la mejoras que se aga en esta aplicación.</p>
+    <p>Si borraste los datos de la app o navegador, pierdes el acceso permanente sin devolución.</p>
+    <p>🎁 Las actualizaciones son gratis.</p>
+    <p>visita las redes sociales del desarrollador.</p>
+    
+    <div class="socials">
+      <a href="https://youtube.com/@kevintechtutorials" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">
+      </a>
+      <a href="https://t.me/appsfake_oficial" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png">
+      </a>
+      <a href="https://whatsapp.com/channel/0029VaGmNBB4Y9lvO2Ppem2l" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="app-container">
+  <div class="header">
+    <h1>yape fake</h1>
+    <div class="help" onclick="window.location.href='https://youtu.be/CcRoSvyghzw'">?</div>
+  </div>
+
+  <div class="content">
+    <div class="slider">
+      <img src="imagen/info.png" class="slide active">
+      <img src="imagen/info1.png" class="slide">
+      <img src="imagen/info2.png" class="slide">
+    </div>
+
+    <div class="dots">
+      <div class="dot active"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </div>
+
+ <div class="buttons">
+
+  <button class="btn btn-primary" onclick="window.location.href='token'">
+    <i class="fas fa-user-plus"></i>
+    Crear una cuenta
+  </button>
+
+  <button class="btn btn-secondary" onclick="window.location.href='token'">
+    <i class="fas fa-right-to-bracket"></i>
+    Ya tengo una cuenta
+  </button>
+
+  <button class="btn btn-demo" onclick="window.location.href='genedemo'">
+    <i class="fas fa-file-invoice"></i>
+    Generar Boucher Demo
+  </button>
+
+</div>
+
+<!-- JS externo -->
+<script src="js/firebase-config.js"></script>
+<script type="module" src="js/index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soporte de Pago</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#7B2C83">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="css/soporte.css">
+</head>
+
+<body>
+
+<div class="card">
+
+  <h2>soporte por Whatsapp</h2>
+  <div class="logo">
+  <i class="fa-solid fa-headset"></i>
+</div>
+  <div class="sub">Si necesitas ayuda llena las siguientes casillas.</div>
+
+  <input class="input" id="nombre" placeholder="Tu nombre">
+
+  <input class="input" id="pagoId" placeholder="ID de pago">
+
+  <textarea class="input" id="mensaje" placeholder="¿Qué pasó?"></textarea>
+
+  <div class="file">
+    <i class="fa fa-image"></i> Subir comprobante
+    <input type="file" id="imagen" accept="image/*" onchange="previewImage(event)" style="display:none;">
+  </div>
+
+  <div class="preview" id="preview"></div>
+
+  <button class="btn" onclick="enviarWhatsApp()">
+    <i class="fa-brands fa-whatsapp"></i> Enviar por WhatsApp
+  </button>
+<div class="status">
+✅ Tiempo promedio de respuesta: 1 a 24 horas
+</div>
+  <div class="back" onclick="history.back()">← Volver</div>
+
+</div>
+
+<script src="js/soporte.js"></script>
+</body>
+</html>

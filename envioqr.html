@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yapear a</title>
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#720e9e" />
+  <link rel="icon" type="image/png" href="imagen/app_icon_xxxhdpi.png"> 
+  <link rel="stylesheet" href="css/envioqr.css">
+</head>
+<body>
+
+  <header>
+    <div class="back" onclick="window.history.back()">←</div>
+    <div class="title">Yapear a</div>
+    <div class="close" onclick="window.close()">✕</div>
+  </header>
+
+  <div class="container">
+    <input type="text" id="nombre" value="" readonly />
+    <div id="subtexto" class="subtexto">Destino</div>
+
+    <div class="monto">
+      s/ <input type="number" id="monto" value="0" min="0" max="500" />
+    </div>
+
+    <div class="limite">Puedes yapear hasta S/ 500 diarios</div>
+
+    <input type="text" id="mensaje" class="mensaje" placeholder="Agregar mensaje" />
+
+    <button class="btn-yapear" onclick="enviar()">YAPEAR</button>
+  </div>
+
+  <script src="js/envioqr.js"></script>
+</body>
+</html>

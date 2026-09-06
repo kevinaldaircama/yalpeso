@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yape Home</title>
+
+  <!-- Iconos y fuentes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json"/>
+  <meta name="theme-color" content="#720e9e"/>
+  <link rel="icon" type="image/png" href="imagen/app_icon_xxxhdpi.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+  <div class="top-section">
+
+    <!-- HEADER -->
+    <div class="header">
+
+      <div class="username">
+        <a href="ajuste" id="userLink">
+          <i class="fas fa-user"></i>
+        </a>
+      </div>
+
+      <div class="search">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Buscar en Yape"/>
+      </div>
+
+      <div class="icons">
+        <a href="http://action_profile">
+          <i class="fas fa-headset"></i>
+        </a>
+
+        <a href="http://action_notifications">
+          <i class="fas fa-bell"></i>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- GRID -->
+    <div class="grid">
+
+      <div class="icon-btn">
+        <a href="recargas" target="_blank" style="text-decoration:none;">
+          <img src="imagen/recargas.png" alt="Recargar">
+          <span>Recargar<br>celular</span>
+        </a>
+      </div>
+
+      <div class="icon-btn">
+        <a href="servicio" target="_blank" style="text-decoration:none;">
+          <img src="imagen/servicios.png" alt="Servicios">
+          <span>Yapear<br>servicios</span>
+        </a>
+      </div>
+
+      <div class="icon-btn"><img src="imagen/promos.png"><span>Promos</span></div>
+      <div class="icon-btn"><img src="imagen/aprobar.png"><span>Aprobar<br>compras</span></div>
+      <div class="icon-btn"><img src="imagen/creditos.png"><span>Créditos</span></div>
+      <div class="icon-btn"><img src="imagen/tienda.png"><span>Tienda</span></div>
+      <div class="icon-btn"><img src="imagen/dolares.png"><span>Dólares</span></div>
+      <div class="icon-btn"><img src="imagen/remesas.png"><span>Remesas</span></div>
+      <div class="icon-btn"><img src="imagen/soat.png"><span>SOAT</span></div>
+      <div class="icon-btn"><img src="imagen/bus.png"><span>Viajar en<br>bus</span></div>
+
+      <div class="icon-btn">
+        <a href="gaming" target="_blank" style="text-decoration:none;">
+          <img src="imagen/gaming.png" alt="Gaming">
+          <span>Gaming</span>
+        </a>
+      </div>
+
+      <div class="icon-btn"><img src="imagen/ver mas.png"><span>Ver todo</span></div>
+
+    </div>
+
+    <!-- CAROUSEL -->
+    <div class="carousel">
+      <div class="slides" id="slide-container">
+        <div class="slide"><img src="imagen/1.jpg"></div>
+        <div class="slide"><img src="imagen/2.jpg"></div>
+        <div class="slide"><img src="imagen/3.jpg"></div>
+        <div class="slide"><img src="imagen/4.jpg"></div>
+      </div>
+    </div>
+
+    <!-- DOTS -->
+    <div class="dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+  </div>
+
+  <!-- ACCIONES -->
+  <div class="actions">
+    <div class="card" onclick="mostrarSaldo()">
+      <span><i class="fas fa-eye"></i> Mostrar saldo</span>
+      <span id="saldo-valor" class="saldo-animado"></span>
+    </div>
+
+    <div class="card" onclick="toggleDropdown()">
+      <span><i class="fas fa-list"></i> Mostrar movimientos</span>
+      <i class="fas fa-chevron-down"></i>
+    </div>
+
+    <div class="dropdown-content" id="dropdown">
+      <div id="movimientos-container">
+        <div style="text-align:center; color:#888;">Cargando movimientos...</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <button onclick="window.location.href='QR'">
+      <i class="fas fa-qrcode"></i> ESCANEAR QR
+    </button>
+
+    <a href="yapear">
+      <i class="fas fa-exchange-alt"></i> YAPEAR
+    </a>
+  </div>
+
+  <!-- JS -->
+  <script src="js/firebase-config.js"></script>
+  <script type="module" src="js/home.js"></script>
+
+</body>
+  </html>

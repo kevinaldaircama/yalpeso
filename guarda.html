@@ -1,0 +1,128 @@
+<!DOCTYPE html>  
+<html lang="es">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>Mis Contactos</title>  
+  
+<link rel="manifest" href="manifest.json" />  
+<meta name="theme-color" content="#720e9e" />  
+<link rel="icon" type="image/png" href="imagen/app_icon_xxxhdpi.png">  
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">  
+<link rel="stylesheet" href="css/guadar.css">  
+  
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>  
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>  
+</head>  
+  
+<body>  
+  
+<div class="header">  
+<i class="fa-solid fa-address-book"></i>  
+Mis Contactos  
+</div>  
+  
+<div class="container">  
+  
+<div class="input-icon">  
+<i class="fa-solid fa-magnifying-glass"></i>  
+<input type="text" id="buscador" placeholder="Buscar contacto...">  
+</div>  
+  
+<div class="input-icon">  
+<i class="fa-solid fa-user"></i>  
+<input type="text" id="nombre" placeholder="Titular">  
+</div>  
+  
+<div class="input-icon">  
+<i class="fa-solid fa-tag"></i>  
+<input type="text" id="apodo" placeholder="Apodo">  
+</div>  
+  
+<div class="input-icon">  
+<i class="fa-solid fa-phone"></i>  
+<input type="tel" id="numero" placeholder="Celular">  
+</div>  
+  
+<button class="btn" onclick="guardarContacto()">  
+<i class="fa-solid fa-floppy-disk"></i> Guardar  
+</button>  
+  
+<button class="btn" onclick="exportarJSON()">  
+<i class="fa-solid fa-file-export"></i> Exportar Contactos  
+</button>  
+  
+<button class="btn" onclick="document.getElementById('importFile').click()">  
+<i class="fa-solid fa-file-import"></i> Importar Contactos  
+</button>  
+  
+<input type="file" id="importFile" accept=".json" style="display:none">  
+  
+<div id="lista"></div>  
+  
+</div>  
+  
+<!-- MODALES -->  
+<div class="modal" id="modalMensaje">  
+<div class="modal-box">  
+<h3><i class="fa-solid fa-circle-exclamation"></i> Aviso</h3>  
+<p id="mensajeTexto"></p>  
+<div class="modal-actions">  
+<button class="modal-btn cancel" onclick="cerrarModal('modalMensaje')">  
+<i class="fa-solid fa-xmark"></i>  
+</button>  
+</div>  
+</div>  
+</div>  
+  
+<div class="modal" id="modalEditar">  
+<div class="modal-box">  
+<h3><i class="fa-solid fa-pen"></i> Editar</h3>  
+<input type="hidden" id="editKey">  
+  
+<div class="input-icon">  
+<i class="fa-solid fa-user"></i>  
+<input type="text" id="editNombre">  
+</div>  
+  
+<div class="input-icon">  
+<i class="fa-solid fa-tag"></i>  
+<input type="text" id="editApodo">  
+</div>  
+  
+<div class="input-icon">  
+<i class="fa-solid fa-phone"></i>  
+<input type="tel" id="editNumero">  
+</div>  
+  
+<div class="modal-actions">  
+<button class="modal-btn save" onclick="guardarEdicion()">  
+<i class="fa-solid fa-check"></i>  
+</button>  
+<button class="modal-btn cancel" onclick="cerrarModal('modalEditar')">  
+<i class="fa-solid fa-xmark"></i>  
+</button>  
+</div>  
+</div>  
+</div>  
+  
+<div class="modal" id="modalEliminar">  
+<div class="modal-box">  
+<h3><i class="fa-solid fa-triangle-exclamation"></i> Confirmar</h3>  
+<p>¿Eliminar este contacto?</p>  
+<input type="hidden" id="deleteKey">  
+<div class="modal-actions">  
+<button class="modal-btn confirm-delete" onclick="confirmarEliminar()">  
+<i class="fa-solid fa-trash"></i>  
+</button>  
+<button class="modal-btn cancel" onclick="cerrarModal('modalEliminar')">  
+<i class="fa-solid fa-xmark"></i>  
+</button>  
+</div>  
+</div>  
+</div>  
+<script src="js/firebase-config.js"></script>  
+<script src="js/guadar.js"></script>  
+</body>  
+</html>

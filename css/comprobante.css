@@ -1,0 +1,210 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #650D89;
+  color: #000;
+}
+
+.container {
+  max-width: 400px;
+  margin: auto;
+  padding: 15px;
+  background-color: #650D89;
+}
+
+.banner{
+    position: relative;
+    border-radius: 0 0 24px 24px;
+    overflow: hidden;
+}
+
+.banner img{
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+.cerrar{
+    position:absolute;
+    top:16px;
+    right:16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:#fff;
+    font-size:24px;
+    font-weight:300;
+    font-family:Arial, sans-serif;
+
+    cursor:pointer;
+    user-select:none;
+    z-index:10;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+  color: #650D89;
+  font-size: 18px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.monto {
+  margin: 5px 0;
+  font-weight: bold;
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.simbolo {
+  font-size: 28px; /* ✅ Mediano */
+  font-weight: bold;
+  margin-top: 6px;
+}
+
+#monto {
+  font-size: 48px; /* 🔥 Número mucho más grande */
+}
+
+.nombre {
+  font-size: 24px; /* Más grande */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.datos {
+  font-size: 14px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.separator {
+  color: #aaa;
+}
+
+.share {
+  color: #00bfa5;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.seguridad-box {
+  margin: 20px 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.seguridad-header {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.icono-seguridad {
+  width: 20px;
+  height: 20px;
+}
+
+.label-seguridad {
+  font-size: 13px;
+  color: gray;
+  font-weight: bold;
+}
+
+.codigo {
+  display: flex;
+  gap: 8px;
+}
+
+.caja {
+  background-color: #f0f0f0;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.transaccion-title {
+  font-size: 13px;
+  color: gray;
+  font-weight: bold;
+  margin: 10px 0 8px 0;
+}
+
+.info {
+  font-size: 13px;
+  color: gray;
+}
+
+.info p {
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.info p strong,
+.info p span {
+  font-weight: bold;
+  color: #000;
+}
+
+.footer-img {
+  width: 100%;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+#estado-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin: 14px 6px;
+  padding: 10px 14px;
+
+  border-radius: 14px;
+
+  background: linear-gradient(
+    90deg,
+    #efe6f2,
+    #e3e8ef
+  );
+}
+
+.estado-icon {
+  background: #4b2d5e;
+
+  width: 28px;
+  height: 28px;
+
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icono-msg {
+  width: 16px;
+  height: 16px;
+}

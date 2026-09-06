@@ -1,0 +1,175 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  background:#f2eef3;
+}
+
+/* HEADER */
+.header{
+  background:#7A1B7E;
+  color:white;
+  padding:20px 20px 30px 20px;
+}
+
+.header-top{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.header-top span{
+  font-size:22px;
+  cursor:pointer;
+}
+
+.header h1{
+  font-size:20px;
+  font-weight:bold;
+}
+
+.header p{
+  font-size:14px;
+  margin-top:10px;
+  color:#f1e6f4;
+}
+
+/* ALERTA */
+.alert{
+  background:#FFC107;
+  color:#000;
+  margin-top:15px;
+  padding:12px;
+  border-radius:8px;
+  display:flex;
+  gap:10px;
+  font-size:14px;
+}
+
+/* FORM */
+.container{
+  padding:25px 20px;
+}
+
+.input-group{
+  margin-bottom:25px;
+}
+
+.input-group input{
+  width:100%;
+  border:none;
+  border-bottom:1px solid #999;
+  padding:10px 0;
+  background:transparent;
+  font-size:16px;
+}
+
+.btn{
+  width:100%;
+  background:#20B2AA;
+  border:none;
+  padding:15px;
+  color:white;
+  font-size:18px;
+  font-weight:bold;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.terms{
+  text-align:center;
+  margin-top:20px;
+  text-decoration:underline;
+  font-size:16px;
+  cursor:pointer;
+}
+
+.info-box{
+  margin-top:40px;
+  background:white;
+  padding:15px;
+  border-radius:12px;
+  box-shadow:0 3px 10px rgba(0,0,0,0.1);
+  font-size:14px;
+}
+
+/* PASOS */
+.step{ display:none; }
+.active{ display:block; }
+
+/* MODAL FIREBASE */
+#modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.7);
+  justify-content:center;
+  align-items:center;
+}
+
+#modal-content{
+  background:white;
+  width:90%;
+  max-width:400px;
+  padding:20px;
+  border-radius:10px;
+  text-align:center;
+}
+
+iframe{
+  width:100%;
+  height:200px;
+  border:none;
+  margin-top:10px;
+}
+
+/* MODAL TERMINOS */
+#modalTerminos{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.6);
+  justify-content:center;
+  align-items:center;
+  z-index:1000;
+}
+
+.modal-box{
+  background:white;
+  width:90%;
+  max-width:420px;
+  max-height:85vh;
+  overflow-y:auto;
+  border-radius:15px;
+  padding:20px;
+  position:relative;
+}
+
+.close-btn{
+  position:absolute;
+  right:15px;
+  top:15px;
+  font-size:20px;
+  cursor:pointer;
+  color:#555;
+}
+
+.modal-box h2{
+  margin-bottom:15px;
+}
+
+.modal-box h3{
+  margin-top:15px;
+  font-size:16px;
+}
+
+.modal-box p{
+  font-size:14px;
+  margin-top:5px;
+  line-height:1.5;
+  color:#444;
+}

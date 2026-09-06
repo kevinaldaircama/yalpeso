@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Escanear QR</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#720e9e">
+<link rel="icon" href="imagen/app_icon_xxxhdpi.png">
+<!-- Librería QR -->
+<script src="https://unpkg.com/html5-qrcode"></script>
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="stylesheet" href="css/QR.css">
+</head>
+
+<body>
+
+<div id="reader"></div>
+
+<!-- Botón cerrar -->
+<div class="close-btn" id="btnCerrar">
+  <i class="fas fa-xmark"></i>
+</div>
+
+<div class="qr-text">
+  Escanea un QR con tu cámara
+</div>
+
+<!-- Botón subir imagen -->
+<div class="bottom-btn" id="btnSubir">
+  <i class="fas fa-image"></i>
+  Subir una imagen con QR
+</div>
+
+<input type="file" id="file-input" accept="image/*">
+
+<p id="result" style="display:none;"></p>
+
+<script src="js/Qr.js"></script>
+</body>
+</html>

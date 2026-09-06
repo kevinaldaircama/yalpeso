@@ -1,0 +1,114 @@
+:root {
+  --bg: #7e2594;
+  --accent: #4fd3b2;
+  --muted: #8b8b8b;
+  --pink: #f7e7f7;
+  --pink-text: #6b2b6f;
+  --white: #ffffff;
+  --teal: #16bfa0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.logo-top {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+}
+
+.logo-top img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 24px 18px 28px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.15);
+}
+
+.success-title {
+  color: #5b2160;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.price {
+  font-size: 42px;
+  font-weight: 800;
+  color: #5b2160;
+}
+
+.date {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 10px 0 18px;
+}
+
+.brand-name {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.desc {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.info-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 3px 10px rgba(0,0,0,.08);
+}
+
+.code-pill {
+  background: var(--pink);
+  color: var(--pink-text);
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 12px 18px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.copy-btn {
+  background: transparent;
+  border: none;
+  color: var(--teal);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary {
+  width: 100%;
+  margin-top: 20px;
+  background: var(--accent);
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}

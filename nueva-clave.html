@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cambiar PIN</title>
+  <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#720e9e">
+<link rel="icon" type="image/png" href="imagen/app_icon_xxxhdpi.png">
+  
+  <link rel="stylesheet" href="css/nueva-clave.css">
+</head>
+<body>
+  <div class="card">
+    <h2>Cambiar PIN</h2>
+    <form id="pinForm">
+      <label for="oldPin">PIN actual:</label>
+      <input type="password" id="oldPin" maxlength="6" required>
+
+      <label for="newPin">Nuevo PIN:</label>
+      <input type="password" id="newPin" maxlength="6" required>
+
+      <label for="confirmPin">Repetir nuevo PIN:</label>
+      <input type="password" id="confirmPin" maxlength="6" required>
+
+      <button type="submit">Guardar nuevo PIN</button>
+      <p id="message"></p>
+    </form>
+  </div>
+
+  <!-- Script Firebase + lógica -->
+  <script src="js/firebase-config.js"></script>
+<script type="module" src="js/nueva-clave.js"></script>
+
+</body>
+</html>

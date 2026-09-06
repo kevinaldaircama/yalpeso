@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crear una Cuenta</title>
+<link rel="manifest" href="manifest.json" />  
+<meta name="theme-color" content="#720e9e" />  
+<link rel="icon" type="image/png" href="imagen/app_icon_xxxhdpi.png">
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="stylesheet" href="css/registrovip.css">  
+</head>
+<body>
+
+<div class="header">
+  <div class="header-top">
+    <span><i class="fa-solid fa-arrow-left"></i></span>
+    <h1>Crear una Cuenta</h1>
+  </div>
+  <p>Completa el formulario. Recuerda que todos los datos son obligatorios y no se podrán cambiar.</p>
+
+  <div class="alert">
+    <i class="fa-solid fa-circle-exclamation"></i>
+    los precios son únicos y no se cambian, si te vendieron de mas posiblemente te ayan estafado o son comisionista.
+  </div>
+</div>
+
+<div class="container">
+
+<div id="step1" class="step active">
+  <div class="input-group">
+    <input type="text" id="usuario" placeholder="Titular">
+  </div>
+
+  <div class="input-group">
+    <input type="email" id="correo" placeholder="Correo electrónico">
+  </div>
+
+  <div class="input-group">
+    <input type="tel" id="telefono" placeholder="Celular">
+  </div>
+
+  <div class="input-group">
+    <input type="number" id="monto" placeholder="Monto inicial">
+  </div>
+
+  <button class="btn" onclick="nextStep(1)">Siguiente</button>
+</div>
+
+<div id="step2" class="step">
+  <div class="input-group">
+    <input type="password" id="clave" placeholder="Contraseña">
+  </div>
+  <div class="input-group">
+    <input type="password" id="clave2" placeholder="Repetir contraseña">
+  </div>
+
+  <button class="btn" onclick="registrarUsuario()">Registrar</button>
+</div>
+
+<div class="terms" onclick="abrirTerminos()">Términos y Condiciones</div>
+
+<div class="info-box">
+  💡 recuerda que puedes utilizar esta cuenta en varios dispositivos
+</div>
+</div>
+
+<!-- MODALES -->
+<div id="modal">
+  <div id="modal-content"></div>
+</div>
+
+<div id="modalTerminos" onclick="cerrarSiFondo(event)">
+  <div class="modal-box">
+    <i class="fa-solid fa-xmark close-btn" onclick="cerrarTerminos()"></i>
+    <h2>Términos y Condiciones</h2>
+    <h3>1. Finalidad del producto</h3>
+    <p>Aplicación desarrollada con fines <b>recreativos y de entretenimiento</b>.</p>
+    <h3>2. Cuentas y acceso</h3>
+    <p>Cuenta personal e intransferible. Prohibido compartir acceso.</p>
+    <h3>3. Seguridad y baneos</h3>
+    <p>El sistema puede <b>banear automáticamente</b> ante irregularidades.</p>
+    <h3>4. Compras</h3>
+    <p>Solo válidas compras en canales oficiales.</p>
+    <h3>5. Política de reembolsos</h3>
+    <p><b>No se realizarán devoluciones ni reembolsos.</b></p>
+    <h3>6. Modificaciones</h3>
+    <p>El uso implica aceptación total de estos términos.</p>
+  </div>
+</div>
+<script src="js/firebase-config.js"></script>
+<script src="js/registrovip.js"></script>
+
+</body>
+</html>
