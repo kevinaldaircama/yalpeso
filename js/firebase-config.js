@@ -1,1 +1,10 @@
-d2luZG93LmZpcmViYXNlQ29uZmlnID0gewogIGFwaUtleTogIkFJemFTeUE4ZVBYcVRBUS1hMW5DTXhmUjgyZEdoMURVbFEtZkNIRSIsCiAgICBhdXRoRG9tYWluOiAieWFwZWZrLmZpcmViYXNlYXBwLmNvbSIsCiAgICBkYXRhYmFzZVVSTDogImh0dHBzOi8veWFwZWZrLWRlZmF1bHQtcnRkYi5maXJlYmFzZWlvLmNvbSIsCiAgICBwcm9qZWN0SWQ6ICJ5YXBlZmsiLAogICAgc3RvcmFnZUJ1Y2tldDogInlhcGVmay5maXJlYmFzZXN0b3JhZ2UuYXBwIiwKICAgIG1lc3NhZ2luZ1NlbmRlcklkOiAiNjg5NzE1MDYzMjAyIiwKICAgIGFwcElkOiAiMTo2ODk3MTUwNjMyMDI6d2ViOmUwNTRmOTZmOGFlZjliZWE3ZGVhZmIiLAogICAgbWVhc3VyZW1lbnRJZDogIkctQjlLTUU4VjJWQiIKICB9Ow==
+window.firebaseConfig = {
+  apiKey: "AIzaSyA8ePXqTAQ-a1nCMxfR82dGh1DUlQ-fCHE",
+    authDomain: "yapefk.firebaseapp.com",
+    databaseURL: "https://yapefk-default-rtdb.firebaseio.com",
+    projectId: "yapefk",
+    storageBucket: "yapefk.firebasestorage.app",
+    messagingSenderId: "689715063202",
+    appId: "1:689715063202:web:e054f96f8aef9bea7deafb",
+    measurementId: "G-B9KME8V2VB"
+  };
