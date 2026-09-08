@@ -1,1 +1,10 @@
-var _0x4d5854=_0x4633;(function(_0x1c0a5f,_0x4932ce){var _0x50f30e=_0x4633,_0x46350f=_0x1c0a5f();while(!![]){try{var _0x5e9756=parseInt(_0x50f30e(0x75))/0x1+parseInt(_0x50f30e(0x82))/0x2+parseInt(_0x50f30e(0x7f))/0x3*(parseInt(_0x50f30e(0x7d))/0x4)+-parseInt(_0x50f30e(0x7c))/0x5+-parseInt(_0x50f30e(0x80))/0x6+-parseInt(_0x50f30e(0x77))/0x7+parseInt(_0x50f30e(0x79))/0x8*(parseInt(_0x50f30e(0x7b))/0x9);if(_0x5e9756===_0x4932ce)break;else _0x46350f['push'](_0x46350f['shift']());}catch(_0x385eaf){_0x46350f['push'](_0x46350f['shift']());}}}(_0x5ecb,0xca591),window[_0x4d5854(0x81)]={'apiKey':_0x4d5854(0x7e),'authDomain':'yapefk.firebaseapp.com','databaseURL':_0x4d5854(0x83),'projectId':'yapefk','storageBucket':_0x4d5854(0x78),'messagingSenderId':_0x4d5854(0x76),'appId':_0x4d5854(0x7a),'measurementId':'G-B9KME8V2VB'});function _0x4633(_0x21bae0,_0x4922a9){_0x21bae0=_0x21bae0-0x75;var _0x5ecb23=_0x5ecb();var _0x4633d0=_0x5ecb23[_0x21bae0];return _0x4633d0;}function _0x5ecb(){var _0xe08a22=['1:689715063202:web:e054f96f8aef9bea7deafb','54avztwz','8062165qrDPPj','4WgpfrU','AIzaSyA8ePXqTAQ-a1nCMxfR82dGh1DUlQ-fCHE','2631795RrnyFc','8199234khhiKd','firebaseConfig','3150854mMlixa','https://yapefk-default-rtdb.firebaseio.com','528145yxcTEu','689715063202','6482014UwBeoj','yapefk.firebasestorage.app','2337272CXDKUm'];_0x5ecb=function(){return _0xe08a22;};return _0x5ecb();}
+window.firebaseConfig = {
+  apiKey: "AIzaSyA8ePXqTAQ-a1nCMxfR82dGh1DUlQ-fCHE",
+    authDomain: "yapefk.firebaseapp.com",
+    databaseURL: "https://yapefk-default-rtdb.firebaseio.com",
+    projectId: "yapefk",
+    storageBucket: "yapefk.firebasestorage.app",
+    messagingSenderId: "689715063202",
+    appId: "1:689715063202:web:e054f96f8aef9bea7deafb",
+    measurementId: "G-B9KME8V2VB"
+  };
