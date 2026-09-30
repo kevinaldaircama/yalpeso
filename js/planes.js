@@ -263,7 +263,7 @@ function confirmarPago(){
     return;
   }
 
-  const numero = "51994031672";
+  const numero = "51912804963";
 
   const mensaje = `
 📥 *Nuevo pago recibido*
