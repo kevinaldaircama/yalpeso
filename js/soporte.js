@@ -35,7 +35,7 @@ ${mensaje}
 Adjunto comprobante 📸
 `;
 
-  const telefono = "51994031672"; // 🔥 TU NÚMERO
+  const telefono = "51912804963"; // 🔥 TU NÚMERO
 
   const url = "https://wa.me/" + telefono + "?text=" + encodeURIComponent(texto);
 
