@@ -17,5 +17,5 @@ function cerrarModal() {
 
 // Abrir soporte
 function abrirSoporte() {
-  window.open('https://wa.link/rbvrgn', '_blank');
+  window.open('https://wa.link/vg60m5', '_blank');
 }
